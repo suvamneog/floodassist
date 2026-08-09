@@ -18,10 +18,28 @@ const Timeline = lazy(() => import('./pages/Timeline'))
 const Donate = lazy(() => import('./pages/Donate'))
 const About = lazy(() => import('./pages/About'))
 
+const PAGE_TITLES = {
+  '/': 'FloodAssist Assam — Flood Map, Relief Camps & Emergency Helplines',
+  '/flood-map': 'Assam Flood Map — Live District Severity | FloodAssist',
+  '/districts': 'Assam District Flood Status | FloodAssist',
+  '/relief-camps': 'Assam Relief Camps — ASDMA Totals | FloodAssist',
+  '/emergency': 'Assam Flood Emergency Helplines (1079, 1070, 108) | FloodAssist',
+  '/checklist': 'Flood Emergency Checklist | FloodAssist Assam',
+  '/updates': 'Assam Flood Updates — ASDMA Advisories | FloodAssist',
+  '/timeline': 'Past Assam Flood Reports | FloodAssist',
+  '/weather': 'Assam River & Impact Alerts | FloodAssist',
+  '/safety-tips': 'Flood Safety Tips for Assam | FloodAssist',
+  '/donate': 'Donate for Assam Flood Relief (Outbound Links) | FloodAssist',
+  '/about': 'About FloodAssist Assam — Unofficial ASDMA Dashboard',
+}
+
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => {
     window.scrollTo(0, 0)
+  }, [pathname])
+  useEffect(() => {
+    document.title = PAGE_TITLES[pathname] || 'FloodAssist Assam'
   }, [pathname])
   return null
 }
