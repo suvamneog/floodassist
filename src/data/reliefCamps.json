@@ -1,28 +1,12 @@
 [
   {
-    "id": "asdma-camp-darrang",
-    "name": "Darrang — district relief camps (total)",
-    "district": "Darrang",
-    "districtId": "darrang",
-    "campCount": 1,
-    "summary": "1 relief camp(s) reported open in Darrang district with 21 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 21,
-    "phone": "1077",
-    "coordinates": {
-      "lat": 26.45,
-      "lng": 92.03
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report"
-  },
-  {
     "id": "asdma-camp-golaghat",
     "name": "Golaghat — district relief camps (total)",
     "district": "Golaghat",
     "districtId": "golaghat",
-    "campCount": 16,
-    "summary": "16 relief camp(s) reported open in Golaghat district with 1,302 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 1302,
+    "campCount": 21,
+    "summary": "21 relief camp(s) reported open in Golaghat district with 1,876 inmates (ASDMA 09 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 1876,
     "phone": "1077",
     "coordinates": {
       "lat": 26.5234,
@@ -36,9 +20,9 @@
     "name": "Jorhat — district relief camps (total)",
     "district": "Jorhat",
     "districtId": "jorhat",
-    "campCount": 10,
-    "summary": "10 relief camp(s) reported open in Jorhat district with 1,254 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 1254,
+    "campCount": 8,
+    "summary": "8 relief camp(s) reported open in Jorhat district with 984 inmates (ASDMA 09 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 984,
     "phone": "1077",
     "coordinates": {
       "lat": 26.7509,
@@ -52,9 +36,9 @@
     "name": "Karbi Anglong — district relief camps (total)",
     "district": "Karbi Anglong",
     "districtId": "karbi-anglong",
-    "campCount": 1,
-    "summary": "1 relief camp(s) reported open in Karbi Anglong district with 98 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 98,
+    "campCount": 2,
+    "summary": "2 relief camp(s) reported open in Karbi Anglong district with 106 inmates (ASDMA 09 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 106,
     "phone": "1077",
     "coordinates": {
       "lat": 26.0,
@@ -68,9 +52,9 @@
     "name": "Nagaon — district relief camps (total)",
     "district": "Nagaon",
     "districtId": "nagaon",
-    "campCount": 4,
-    "summary": "4 relief camp(s) reported open in Nagaon district with 1,031 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 1031,
+    "campCount": 2,
+    "summary": "2 relief camp(s) reported open in Nagaon district with 385 inmates (ASDMA 09 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 385,
     "phone": "1077",
     "coordinates": {
       "lat": 26.3509,
@@ -84,9 +68,9 @@
     "name": "Sivasagar — district relief camps (total)",
     "district": "Sivasagar",
     "districtId": "sivasagar",
-    "campCount": 21,
-    "summary": "21 relief camp(s) reported open in Sivasagar district with 4,862 inmates (ASDMA 08 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 4862,
+    "campCount": 19,
+    "summary": "19 relief camp(s) reported open in Sivasagar district with 4,649 inmates (ASDMA 09 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 4649,
     "phone": "1077",
     "coordinates": {
       "lat": 26.9844,
