@@ -1,15 +1,15 @@
 [
   {
-    "id": "asdma-biswanath",
-    "district": "Biswanath",
-    "districtId": "biswanath",
-    "location": "Biswanath district",
+    "id": "asdma-cachar",
+    "district": "Cachar",
+    "districtId": "cachar",
+    "location": "Cachar district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 0 people affected, 4 villages, 0 relief camps.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 0 people affected, 11 villages, 0 relief camps. Revenue circles — Lakhipur: 0 people, 13 ha crop; Sonai: 0 people, 210 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
-      "lat": 26.7333,
-      "lng": 93.15
+      "lat": 24.8333,
+      "lng": 92.7789
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -20,8 +20,8 @@
     "districtId": "charaideo",
     "location": "Charaideo district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 3,989 people affected, 4 villages, 0 relief camps. Revenue circles — Sonari: 3,989 people, 120 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 2,539 people affected, 2 villages, 0 relief camps. Revenue circles — Sonari: 2,539 people.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 27.0333,
       "lng": 95.0
@@ -35,8 +35,8 @@
     "districtId": "darrang",
     "location": "Darrang district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 500 people affected, 32 villages, 0 relief camps. Revenue circles — Dalgaon: 0 people, 113 ha crop; Mangaldoi: 500 people, 750 ha crop; Sipajhar: 0 people, 166.55 ha crop; Patharighat: 0 people, 124 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 305 people affected, 16 villages, 0 relief camps. Revenue circles — Dalgaon: 0 people, 71 ha crop; Mangaldoi: 305 people, 350 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.45,
       "lng": 92.03
@@ -50,8 +50,8 @@
     "districtId": "golaghat",
     "location": "Golaghat district",
     "status": "flooded",
-    "description": "ASDMA report 09 Aug 2026: 68,239 people affected, 145 villages, 21 relief camps. Revenue circles — Golaghat: 1,966 people, 557 ha crop; Bokakhat: 37,058 people, 124 ha crop; Khumtai: 14,193 people, 580 ha crop; Morongi: 4,804 people, 323.66 ha crop; Sarupathar: 39 people, 19 ha crop; Dergaon: 10,179 people, 402.85 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 71,061 people affected, 147 villages, 22 relief camps. Revenue circles — Golaghat: 2,281 people, 465 ha crop; Khumtai: 15,277 people, 580 ha crop; Morongi: 6,266 people, 546.16 ha crop; Dergaon: 10,179 people, 402.85 ha crop; Bokakhat: 37,058 people, 30 ha crop; Sarupathar: 0 people, 16.93 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -65,8 +65,8 @@
     "districtId": "hojai",
     "location": "Hojai district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 0 people affected, 27 villages, 0 relief camps. Revenue circles — Doboka: 0 people, 823 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 0 people affected, 30 villages, 0 relief camps. Revenue circles — Doboka: 0 people, 984 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.0,
       "lng": 92.8667
@@ -80,8 +80,8 @@
     "districtId": "jorhat",
     "location": "Jorhat district",
     "status": "flooded",
-    "description": "ASDMA report 09 Aug 2026: 16,259 people affected, 57 villages, 8 relief camps. Revenue circles — Jorhat West: 6,182 people; Titabor: 0 people, 20 ha crop; Jorhat East: 98 people, 52 ha crop; Teok: 9,979 people, 1988.9 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 13,166 people affected, 52 villages, 5 relief camps. Revenue circles — Teok: 8,420 people, 1105 ha crop; Titabor: 58 people, 15 ha crop; Jorhat East: 0 people, 52 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
@@ -95,8 +95,8 @@
     "districtId": "karbi-anglong",
     "location": "Karbi Anglong district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 466 people affected, 9 villages, 2 relief camps. Revenue circles — Diphu: 45 people; Phuloni: 296 people; Silonijan: 125 people.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 852 people affected, 4 villages, 0 relief camps. Revenue circles — Phuloni: 852 people.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.0,
       "lng": 93.45
@@ -110,8 +110,8 @@
     "districtId": "lakhimpur",
     "location": "Lakhimpur district",
     "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 0 people affected, 7 villages, 0 relief camps. Revenue circles — Narayanpur: 0 people, 622 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 0 people affected, 7 villages, 0 relief camps. Revenue circles — Narayanpur: 0 people, 42 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 27.2364,
       "lng": 94.1036
@@ -124,9 +124,9 @@
     "district": "Nagaon",
     "districtId": "nagaon",
     "location": "Nagaon district",
-    "status": "waterlogging",
-    "description": "ASDMA report 09 Aug 2026: 8,642 people affected, 61 villages, 2 relief camps. Revenue circles — Kaliabor: 495 people, 553 ha crop; Nagaon: 124 people, 17 ha crop; Samaguri: 8,023 people, 2300.5 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "status": "flooded",
+    "description": "ASDMA report 10 Aug 2026: 16,908 people affected, 122 villages, 4 relief camps. Revenue circles — Samaguri: 15,086 people, 2310.1 ha crop; Kampur: 0 people, 1051 ha crop; Kaliabor: 1,276 people, 816 ha crop; Nagaon: 546 people, 17 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -140,8 +140,8 @@
     "districtId": "sivasagar",
     "location": "Sivasagar district",
     "status": "flooded",
-    "description": "ASDMA report 09 Aug 2026: 39,495 people affected, 110 villages, 19 relief camps. Revenue circles — Amguri: 2,188 people, 81 ha crop; Nazira: 5,797 people, 1879 ha crop; Sonari RC part: 2,590 people, 30 ha crop; Sivsagar: 28,920 people, 287 ha crop.",
-    "lastUpdated": "2026-08-09T08:00:00Z",
+    "description": "ASDMA report 10 Aug 2026: 21,600 people affected, 67 villages, 17 relief camps. Revenue circles — Amguri: 1,880 people, 81 ha crop; Nazira: 4,197 people, 1879 ha crop; Sivsagar: 15,523 people, 250 ha crop.",
+    "lastUpdated": "2026-08-10T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
