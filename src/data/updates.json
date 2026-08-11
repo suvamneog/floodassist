@@ -1,16 +1,16 @@
 [
   {
-    "id": "asdma-2026-08-10",
-    "title": "ASDMA Daily Flood Report — 10 Aug 2026",
-    "date": "2026-08-10T08:00:00Z",
+    "id": "asdma-2026-08-11",
+    "title": "ASDMA Daily Flood Report — 11 Aug 2026",
+    "date": "2026-08-11T08:00:00Z",
     "source": "ASDMA / SDRF",
-    "summary": "10 districts affected. 126,431 people affected across 458 villages. 48 relief camps with 8,447 inmates. Rivers above danger level: Dhansiri (S), Dhansiri (S), Kushiyara (SRIBHUMI (FFS). Source: https://sdrf.assam.gov.in/dfr/"
+    "summary": "7 districts affected. 112,718 people affected across 441 villages. 47 relief camps with 7,982 inmates. Rivers above danger level: Dhansiri (S), Kushiyara (SRIBHUMI (FFS). Source: https://sdrf.assam.gov.in/dfr/"
   },
   {
-    "id": "cwc-danger-2026-08-10",
+    "id": "cwc-danger-2026-08-11",
     "title": "CWC: rivers flowing above danger level",
-    "date": "2026-08-10T08:00:00Z",
+    "date": "2026-08-11T08:00:00Z",
     "source": "CWC via ASDMA",
-    "summary": "Dhansiri (S), Dhansiri (S), Kushiyara (SRIBHUMI (FFS)"
+    "summary": "Dhansiri (S), Kushiyara (SRIBHUMI (FFS)"
   }
 ]
