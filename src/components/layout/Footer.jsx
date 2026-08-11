@@ -17,7 +17,11 @@ export default function Footer() {
             </div>
             <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               Helping people across Assam quickly access flood situations, relief
-              camps and emergency information.
+              camps and emergency information. Independent project by{' '}
+              <span className="font-semibold text-slate-800 dark:text-slate-200">
+                Suvam Neog
+              </span>
+              — not affiliated with ASDMA or the Government of Assam.
             </p>
           </div>
 
@@ -73,7 +77,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-slate-500 dark:border-border-dark sm:flex-row">
-          <p>© {new Date().getFullYear()} FloodAssist Assam. Built for Assam.</p>
+          <p>
+            © {new Date().getFullYear()} FloodAssist Assam · Built by Suvam Neog ·
+            Unofficial · not a government site
+          </p>
           <div className="flex gap-4">
             <Link to="/safety-tips" className="hover:text-primary-600">
               Safety Tips

@@ -22,7 +22,10 @@ export default function DataFreshnessBanner({ meta, compact = false }) {
         <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           <span className="inline-flex items-center gap-2 text-sm font-bold text-emerald-700 dark:text-emerald-400">
             <Circle className="h-2.5 w-2.5 fill-emerald-500 text-emerald-500" />
-            Official ASDMA Data
+            ASDMA Daily Report
+          </span>
+          <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+            Unofficial site · not ASDMA
           </span>
           <span className="text-sm text-slate-600 dark:text-slate-300">
             <span className="font-medium text-slate-400">Latest Report</span>{' '}
