@@ -18,19 +18,80 @@ const Timeline = lazy(() => import('./pages/Timeline'))
 const Donate = lazy(() => import('./pages/Donate'))
 const About = lazy(() => import('./pages/About'))
 
-const PAGE_TITLES = {
-  '/': 'FloodAssist Assam — Flood Map, Relief Camps & Emergency Helplines',
-  '/flood-map': 'Assam Flood Map — Live District Severity | FloodAssist',
-  '/districts': 'Assam District Flood Status | FloodAssist',
-  '/relief-camps': 'Assam Relief Camps — ASDMA Totals | FloodAssist',
-  '/emergency': 'Assam Flood Emergency Helplines (1079, 1070, 108) | FloodAssist',
-  '/checklist': 'Flood Emergency Checklist | FloodAssist Assam',
-  '/updates': 'Assam Flood Updates — ASDMA Advisories | FloodAssist',
-  '/timeline': 'Past Assam Flood Reports | FloodAssist',
-  '/weather': 'Assam River & Impact Alerts | FloodAssist',
-  '/safety-tips': 'Flood Safety Tips for Assam | FloodAssist',
-  '/donate': 'Donate for Assam Flood Relief (Outbound Links) | FloodAssist',
-  '/about': 'About FloodAssist Assam — Unofficial ASDMA Dashboard',
+const SITE = 'https://floodassist-assam.vercel.app'
+
+const PAGE_SEO = {
+  '/': {
+    title: 'FloodAssist Assam — Assam Flood Map, Relief Camps & Emergency Helplines',
+    description:
+      'Check Assam flood situation from the latest ASDMA daily report: district status, flood map, relief camps, river alerts, helplines 1079 1070 108, and past reports.',
+  },
+  '/flood-map': {
+    title: 'Assam Flood Map — District Severity | FloodAssist Assam',
+    description:
+      'Interactive Assam flood map shaded by district severity from the latest ASDMA daily flood report. Search districts and view impact details.',
+  },
+  '/districts': {
+    title: 'Assam District Flood Status | FloodAssist Assam',
+    description:
+      'Flood severity across Assam districts with people affected, villages, and camps from the official ASDMA daily report.',
+  },
+  '/relief-camps': {
+    title: 'Assam Relief Camps — ASDMA Camp Totals | FloodAssist',
+    description:
+      'District-level Assam relief camp and inmate totals from the ASDMA daily flood report. Confirm addresses with District Administration / 1077.',
+  },
+  '/emergency': {
+    title: 'Assam Flood Emergency Helplines (1079, 1070, 108) | FloodAssist',
+    description:
+      'Flood-first Assam emergency contacts: ASDMA 1079, SEOC 1070, ambulance 108, police 100, fire 101, and District Control Room 1077.',
+  },
+  '/checklist': {
+    title: 'Flood Emergency Checklist | FloodAssist Assam',
+    description:
+      'Interactive Assam flood preparedness checklist — pack essentials, documents, and safety steps before and during floods.',
+  },
+  '/updates': {
+    title: 'Assam Flood Updates — ASDMA Advisories | FloodAssist',
+    description:
+      'Short Assam flood advisories derived from the latest ASDMA daily flood report and CWC river notes.',
+  },
+  '/timeline': {
+    title: 'Past Assam Flood Reports | FloodAssist Assam',
+    description:
+      'Browse past ASDMA daily flood reports for Assam — people affected, districts, camps, and river alerts by date.',
+  },
+  '/weather': {
+    title: 'Assam River & Impact Alerts | FloodAssist Assam',
+    description:
+      'Rivers above danger level and flood impact snapshot from CWC figures in the ASDMA daily flood report for Assam.',
+  },
+  '/safety-tips': {
+    title: 'Flood Safety Tips for Assam | FloodAssist',
+    description:
+      'Practical Assam flood safety tips: before, during, and after flooding. Follow official ASDMA and district guidance.',
+  },
+  '/donate': {
+    title: 'Donate for Assam Flood Relief (Outbound Links) | FloodAssist',
+    description:
+      'Outbound Assam flood relief donation links only. FloodAssist does not collect money or verify how funds are spent.',
+  },
+  '/about': {
+    title: 'About FloodAssist Assam — Unofficial ASDMA Dashboard',
+    description:
+      'FloodAssist Assam is an unofficial, informational dashboard over ASDMA daily flood reports. Not affiliated with ASDMA.',
+  },
+}
+
+function setMeta(name, content, attr = 'name') {
+  if (!content) return
+  let el = document.head.querySelector(`meta[${attr}="${name}"]`)
+  if (!el) {
+    el = document.createElement('meta')
+    el.setAttribute(attr, name)
+    document.head.appendChild(el)
+  }
+  el.setAttribute('content', content)
 }
 
 function ScrollToTop() {
@@ -39,7 +100,29 @@ function ScrollToTop() {
     window.scrollTo(0, 0)
   }, [pathname])
   useEffect(() => {
-    document.title = PAGE_TITLES[pathname] || 'FloodAssist Assam'
+    const seo = PAGE_SEO[pathname] || {
+      title: 'FloodAssist Assam',
+      description:
+        'Assam flood map, district status, relief camps, and emergency helplines from ASDMA daily reports.',
+    }
+    document.title = seo.title
+    setMeta('description', seo.description)
+    setMeta('og:title', seo.title, 'property')
+    setMeta('og:description', seo.description, 'property')
+    setMeta('og:url', `${SITE}${pathname === '/' ? '/' : pathname}`, 'property')
+    setMeta('twitter:title', seo.title)
+    setMeta('twitter:description', seo.description)
+
+    let canonical = document.head.querySelector('link[rel="canonical"]')
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute(
+      'href',
+      `${SITE}${pathname === '/' ? '/' : pathname}`
+    )
   }, [pathname])
   return null
 }
