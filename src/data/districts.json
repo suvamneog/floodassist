@@ -1,16 +1,35 @@
 [
   {
-    "id": "cachar",
-    "name": "Cachar",
-    "severity": "waterlogging",
-    "affectedVillages": 11,
+    "id": "bongaigaon",
+    "name": "Bongaigaon",
+    "severity": "normal",
+    "affectedVillages": 0,
     "river": null,
     "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
-    "cropAreaHa": 223.0,
+    "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
+    "coordinates": {
+      "lat": 26.4833,
+      "lng": 90.55
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+  },
+  {
+    "id": "cachar",
+    "name": "Cachar",
+    "severity": "normal",
+    "affectedVillages": 0,
+    "river": null,
+    "populationAffected": 0,
+    "reliefCamps": 0,
+    "campInmates": 0,
+    "cropAreaHa": 0.0,
+    "humanLivesLost": 0,
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 24.8333,
       "lng": 92.7789
@@ -21,15 +40,15 @@
   {
     "id": "charaideo",
     "name": "Charaideo",
-    "severity": "moderate",
-    "affectedVillages": 2,
+    "severity": "normal",
+    "affectedVillages": 0,
     "river": null,
-    "populationAffected": 2539,
+    "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 27.0333,
       "lng": 95.0
@@ -41,17 +60,36 @@
     "id": "darrang",
     "name": "Darrang",
     "severity": "waterlogging",
-    "affectedVillages": 16,
+    "affectedVillages": 24,
     "river": null,
-    "populationAffected": 305,
+    "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
-    "cropAreaHa": 421.0,
+    "cropAreaHa": 918.04,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.45,
       "lng": 92.03
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+  },
+  {
+    "id": "dhemaji",
+    "name": "Dhemaji",
+    "severity": "normal",
+    "affectedVillages": 0,
+    "river": null,
+    "populationAffected": 0,
+    "reliefCamps": 0,
+    "campInmates": 0,
+    "cropAreaHa": 0.0,
+    "humanLivesLost": 0,
+    "lastUpdated": "2026-08-11T08:00:00Z",
+    "coordinates": {
+      "lat": 27.4855,
+      "lng": 94.556
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report (SDRF/DFR)"
@@ -67,7 +105,7 @@
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 27.4728,
       "lng": 94.912
@@ -79,14 +117,14 @@
     "id": "golaghat",
     "name": "Golaghat",
     "severity": "severe",
-    "affectedVillages": 147,
+    "affectedVillages": 141,
     "river": null,
-    "populationAffected": 71061,
+    "populationAffected": 65295,
     "reliefCamps": 22,
-    "campInmates": 2769,
-    "cropAreaHa": 2040.94,
+    "campInmates": 2429,
+    "cropAreaHa": 2109.89,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -98,14 +136,14 @@
     "id": "hojai",
     "name": "Hojai",
     "severity": "waterlogging",
-    "affectedVillages": 30,
+    "affectedVillages": 25,
     "river": null,
     "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
-    "cropAreaHa": 984.0,
+    "cropAreaHa": 626.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.0,
       "lng": 92.8667
@@ -119,12 +157,12 @@
     "severity": "severe",
     "affectedVillages": 52,
     "river": null,
-    "populationAffected": 13166,
-    "reliefCamps": 5,
-    "campInmates": 622,
-    "cropAreaHa": 1172.0,
+    "populationAffected": 12608,
+    "reliefCamps": 6,
+    "campInmates": 615,
+    "cropAreaHa": 1010.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
@@ -133,36 +171,17 @@
     "source": "ASDMA Daily Flood Report (SDRF/DFR)"
   },
   {
-    "id": "karbi-anglong",
-    "name": "Karbi Anglong",
-    "severity": "waterlogging",
-    "affectedVillages": 4,
-    "river": null,
-    "populationAffected": 852,
-    "reliefCamps": 0,
-    "campInmates": 0,
-    "cropAreaHa": 0.0,
-    "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
-    "coordinates": {
-      "lat": 26.0,
-      "lng": 93.45
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
-  },
-  {
     "id": "lakhimpur",
     "name": "Lakhimpur",
     "severity": "waterlogging",
-    "affectedVillages": 7,
+    "affectedVillages": 1,
     "river": null,
     "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
     "cropAreaHa": 42.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 27.2364,
       "lng": 94.1036
@@ -174,14 +193,14 @@
     "id": "nagaon",
     "name": "Nagaon",
     "severity": "severe",
-    "affectedVillages": 122,
+    "affectedVillages": 135,
     "river": null,
-    "populationAffected": 16908,
+    "populationAffected": 16321,
     "reliefCamps": 4,
-    "campInmates": 704,
-    "cropAreaHa": 4194.1,
+    "campInmates": 750,
+    "cropAreaHa": 4365.1,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -193,14 +212,14 @@
     "id": "sivasagar",
     "name": "Sivasagar",
     "severity": "severe",
-    "affectedVillages": 67,
+    "affectedVillages": 63,
     "river": null,
-    "populationAffected": 21600,
-    "reliefCamps": 17,
-    "campInmates": 4352,
-    "cropAreaHa": 2210.0,
+    "populationAffected": 18494,
+    "reliefCamps": 15,
+    "campInmates": 4188,
+    "cropAreaHa": 1808.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
@@ -219,7 +238,7 @@
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-10T08:00:00Z",
+    "lastUpdated": "2026-08-11T08:00:00Z",
     "coordinates": {
       "lat": 26.7536,
       "lng": 92.102

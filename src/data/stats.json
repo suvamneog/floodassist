@@ -1,12 +1,12 @@
 {
-  "floodedDistricts": 10,
-  "reliefCamps": 48,
-  "lastUpdated": "2026-08-10T08:00:00Z",
-  "peopleAffected": 126431,
-  "campInmates": 8447,
-  "activeAlerts": 3,
-  "riverWarnings": 3,
+  "floodedDistricts": 7,
+  "reliefCamps": 47,
+  "lastUpdated": "2026-08-11T08:00:00Z",
+  "peopleAffected": 112718,
+  "campInmates": 7982,
+  "activeAlerts": 2,
+  "riverWarnings": 2,
   "source": "ASDMA Daily Flood Report (SDRF/DFR)",
-  "period": "2026-08-10",
-  "reportDate": "2026-08-10"
+  "period": "2026-08-11",
+  "reportDate": "2026-08-11"
 }

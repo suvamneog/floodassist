@@ -4,10 +4,10 @@
     "type": "river-level",
     "title": "Rivers Above Danger Level",
     "level": "red",
-    "value": "3 rivers",
+    "value": "2 rivers",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
-    "description": "Dhansiri (S), Dhansiri (S), Kushiyara (SRIBHUMI (FFS)",
-    "validUntil": "2026-08-10T08:00:00Z",
+    "description": "Dhansiri (S), Kushiyara (SRIBHUMI (FFS)",
+    "validUntil": "2026-08-11T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -18,7 +18,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above highest flood level today.",
-    "validUntil": "2026-08-10T08:00:00Z",
+    "validUntil": "2026-08-11T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -26,10 +26,10 @@
     "type": "impact",
     "title": "Flood Impact Snapshot",
     "level": "orange",
-    "value": "10 districts",
-    "unit": "126,431 people affected",
-    "description": "ASDMA report as on 10 Aug 2026: 48 relief camps housing 8,447 inmates.",
-    "validUntil": "2026-08-10T08:00:00Z",
+    "value": "7 districts",
+    "unit": "112,718 people affected",
+    "description": "ASDMA report as on 11 Aug 2026: 47 relief camps housing 7,982 inmates.",
+    "validUntil": "2026-08-11T08:00:00Z",
     "source": "ASDMA Daily Flood Report"
   }
 ]
