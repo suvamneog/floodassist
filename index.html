@@ -1,21 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FloodAssist Assam — Flood Map, Relief Camps &amp; Emergency Helplines</title>
+    <title>FloodAssist Assam — Assam Flood Map, Relief Camps &amp; Emergency Helplines</title>
     <meta
       name="description"
-      content="Unofficial Assam flood dashboard with the latest ASDMA daily report figures: district status, flood map, relief camps, river alerts, emergency helplines (1079, 1070, 108), and past reports."
+      content="Check Assam flood situation from the latest ASDMA daily report: district flood status, interactive flood map, relief camps, river alerts, emergency helplines 1079 1070 108, and past flood reports. Unofficial, mobile-friendly."
     />
     <meta
       name="keywords"
-      content="Assam flood, ASDMA, flood map Assam, relief camps Assam, Assam emergency helpline, flood situation Assam, SDRF"
+      content="Assam flood, Assam flood map, ASDMA flood report, Assam relief camps, Assam flood helpline 1079, Assam flood situation today, SDRF Assam, flood affected districts Assam"
     />
     <meta name="author" content="FloodAssist Assam" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#0f766e" />
     <link rel="canonical" href="https://floodassist-assam.vercel.app/" />
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FloodAssist Assam" />
@@ -23,26 +26,71 @@
     <meta property="og:url" content="https://floodassist-assam.vercel.app/" />
     <meta
       property="og:title"
-      content="FloodAssist Assam — Flood Map, Relief Camps &amp; Emergency Helplines"
+      content="FloodAssist Assam — Assam Flood Map, Relief Camps &amp; Helplines"
     />
     <meta
       property="og:description"
-      content="Check Assam flood situations from the latest ASDMA daily report: districts, camps, rivers, helplines, and past reports — mobile-friendly."
+      content="Latest ASDMA daily flood figures for Assam: districts, camps, rivers, helplines, and past reports — clear on mobile."
     />
     <meta
       property="og:image"
-      content="https://floodassist-assam.vercel.app/favicon.svg"
+      content="https://floodassist-assam.vercel.app/og-image.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Assam flood situation — FloodAssist Assam dashboard" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="FloodAssist Assam — Flood Map, Relief Camps &amp; Helplines"
+      content="FloodAssist Assam — Flood Map, Camps &amp; Helplines"
     />
     <meta
       name="twitter:description"
       content="Latest ASDMA daily flood figures for Assam: map, districts, camps, rivers, and emergency contacts."
     />
+    <meta
+      name="twitter:image"
+      content="https://floodassist-assam.vercel.app/og-image.jpg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://floodassist-assam.vercel.app/#website",
+            "url": "https://floodassist-assam.vercel.app/",
+            "name": "FloodAssist Assam",
+            "description": "Unofficial Assam flood dashboard using ASDMA daily flood report figures.",
+            "inLanguage": "en-IN",
+            "publisher": { "@id": "https://floodassist-assam.vercel.app/#org" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://floodassist-assam.vercel.app/#org",
+            "name": "FloodAssist Assam",
+            "url": "https://floodassist-assam.vercel.app/",
+            "logo": "https://floodassist-assam.vercel.app/favicon.svg",
+            "description": "Informational Assam flood preparedness site. Not affiliated with ASDMA."
+          },
+          {
+            "@type": "WebApplication",
+            "name": "FloodAssist Assam",
+            "url": "https://floodassist-assam.vercel.app/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR"
+            },
+            "description": "Assam flood map, district status, relief camps, river alerts, and emergency helplines based on the ASDMA daily flood report."
+          }
+        ]
+      }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,6 +101,26 @@
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <main>
+        <h1>FloodAssist Assam</h1>
+        <p>
+          Unofficial Assam flood dashboard with the latest ASDMA daily report figures.
+          Enable JavaScript for the full interactive map and district tools.
+        </p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/flood-map">Assam Flood Map</a></li>
+          <li><a href="/districts">District Flood Status</a></li>
+          <li><a href="/relief-camps">Relief Camps</a></li>
+          <li><a href="/emergency">Emergency Helplines</a></li>
+          <li><a href="/timeline">Past Flood Reports</a></li>
+          <li><a href="/weather">River &amp; Impact Alerts</a></li>
+          <li><a href="/donate">Donate (outbound links)</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </main>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

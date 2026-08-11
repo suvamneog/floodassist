@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Prefer HTTPS canonical host
 Sitemap: https://floodassist-assam.vercel.app/sitemap.xml
