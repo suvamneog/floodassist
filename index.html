@@ -7,7 +7,7 @@
     <title>FloodAssist Assam — Assam Flood Map, Relief Camps &amp; Emergency Helplines</title>
     <meta
       name="description"
-      content="Check Assam flood situation from the latest ASDMA daily report: district flood status, interactive flood map, relief camps, river alerts, emergency helplines 1079 1070 108, and past flood reports. Unofficial, mobile-friendly."
+      content="Independent Assam flood dashboard by Suvam Neog — not a government website. Latest ASDMA daily report figures: district flood status, flood map, relief camps, river alerts, helplines 1079 1070 108, and past reports."
     />
     <meta
       name="keywords"
@@ -59,21 +59,25 @@
         "@context": "https://schema.org",
         "@graph": [
           {
+            "@type": "Person",
+            "@id": "https://floodassist-assam.vercel.app/#creator",
+            "name": "Suvam Neog",
+            "url": "https://github.com/suvamneog",
+            "sameAs": [
+              "https://github.com/suvamneog",
+              "https://github.com/suvamneog/floodassist"
+            ]
+          },
+          {
             "@type": "WebSite",
             "@id": "https://floodassist-assam.vercel.app/#website",
             "url": "https://floodassist-assam.vercel.app/",
             "name": "FloodAssist Assam",
-            "description": "Unofficial Assam flood dashboard using ASDMA daily flood report figures.",
+            "description": "Unofficial Assam flood dashboard by Suvam Neog using public ASDMA daily flood report figures. Not a government website.",
             "inLanguage": "en-IN",
-            "publisher": { "@id": "https://floodassist-assam.vercel.app/#org" }
-          },
-          {
-            "@type": "Organization",
-            "@id": "https://floodassist-assam.vercel.app/#org",
-            "name": "FloodAssist Assam",
-            "url": "https://floodassist-assam.vercel.app/",
-            "logo": "https://floodassist-assam.vercel.app/favicon.svg",
-            "description": "Informational Assam flood preparedness site. Not affiliated with ASDMA."
+            "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "publisher": { "@id": "https://floodassist-assam.vercel.app/#creator" }
           },
           {
             "@type": "WebApplication",
@@ -81,12 +85,14 @@
             "url": "https://floodassist-assam.vercel.app/",
             "applicationCategory": "UtilitiesApplication",
             "operatingSystem": "Any",
+            "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "INR"
             },
-            "description": "Assam flood map, district status, relief camps, river alerts, and emergency helplines based on the ASDMA daily flood report."
+            "description": "Independent Assam flood map, district status, relief camps, river alerts, and emergency helplines based on the public ASDMA daily flood report. Not affiliated with ASDMA or the Government of Assam. Built by Suvam Neog."
           }
         ]
       }
@@ -105,8 +111,9 @@
       <main>
         <h1>FloodAssist Assam</h1>
         <p>
-          Unofficial Assam flood dashboard with the latest ASDMA daily report figures.
-          Enable JavaScript for the full interactive map and district tools.
+          Unofficial Assam flood dashboard by Suvam Neog, using public ASDMA daily
+          report figures. Not a government website. Enable JavaScript for the full
+          interactive map and district tools.
         </p>
         <ul>
           <li><a href="/">Home</a></li>

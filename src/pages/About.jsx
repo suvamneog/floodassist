@@ -50,15 +50,31 @@ export default function About() {
             <strong className="text-slate-900 dark:text-white">
               FloodAssist Assam
             </strong>{' '}
-            was created to bring that information together in a clean, mobile-first
+            was created by{' '}
+            <strong className="text-slate-900 dark:text-white">Suvam Neog</strong>{' '}
+            to bring that information together in a clean, mobile-first
             experience. The goal is simple: help people check flood situations,
             find relief camps, reach emergency services and follow official
             updates — quickly, clearly and without clutter.
           </p>
+          <p className="mt-4 rounded-xl border border-amber-200/80 bg-amber-50 px-3 py-2.5 text-sm text-amber-950 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-100">
+            <strong>Not a government website.</strong> FloodAssist Assam is an
+            independent, unofficial project. It is <strong>not</strong> run by
+            ASDMA, SDRF, or the Government of Assam. Flood figures are taken from
+            the public ASDMA / SDRF Daily Flood Report PDF for easier reading.
+          </p>
           <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
             This platform is informational only. Always follow official guidance
-            from ASDMA, District Administration and IMD. Flood figures in this app
-            are ingested from the official ASDMA / SDRF Daily Flood Report PDF.
+            from ASDMA, District Administration and IMD. Built by Suvam Neog —{' '}
+            <a
+              href="https://github.com/suvamneog/floodassist"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary-700 underline-offset-2 hover:underline dark:text-primary-300"
+            >
+              source on GitHub
+            </a>
+            .
           </p>
         </Card>
       </motion.div>
