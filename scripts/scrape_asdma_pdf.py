@@ -1041,6 +1041,19 @@ def write_json(path: Path, data: Any) -> None:
     print(f"  ✓ Wrote {path.relative_to(ROOT)}")
 
 
+def update_sitemap_lastmod(report_date: dt.date) -> None:
+    """Bump <lastmod> in public/sitemap.xml so Search Console sees fresh dates."""
+    sitemap = ROOT / "public" / "sitemap.xml"
+    if not sitemap.exists():
+        return
+    iso = report_date.isoformat()
+    text = sitemap.read_text(encoding="utf-8")
+    updated = re.sub(r"<lastmod>\d{4}-\d{2}-\d{2}</lastmod>", f"<lastmod>{iso}</lastmod>", text)
+    if updated != text:
+        sitemap.write_text(updated, encoding="utf-8")
+        print(f"  ✓ Updated sitemap lastmod → {iso}")
+
+
 def build_history_entry(data: dict[str, Any], parsed: dict[str, Any], report_date: dt.date) -> dict[str, Any]:
     """Compact snapshot used for trends, comparison and timeline."""
     top = sorted(
@@ -1175,6 +1188,7 @@ def process_one_day(
         write_json(DATA_DIR / "weather.json", data["weather"])
         write_json(DATA_DIR / "updates.json", data["updates"])
         write_json(DATA_DIR / "meta.json", data["meta"])
+        update_sitemap_lastmod(report_date)
         print(
             f"\n✓ Live dashboard updated from ASDMA report dated "
             f"{report_date.strftime('%d %b %Y')}."

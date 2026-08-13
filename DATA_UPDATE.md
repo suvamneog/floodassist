@@ -57,11 +57,13 @@ If the scraper prints `wrong report date inside PDF` or lookback lands on an old
 ### Commit & ship
 
 ```bash
-git add src/data
+git add src/data public/sitemap.xml
 git commit -m "chore: refresh ASDMA flood data (YYYY-MM-DD)"
 git push -u origin HEAD
 # Open PR → review figures → merge → Vercel redeploys
 ```
+
+The scraper also bumps `public/sitemap.xml` `<lastmod>` to the report date — include that file in the data PR.
 
 PR title example: `Data: refresh ASDMA flood report (2026-08-03)`
 
