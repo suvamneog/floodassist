@@ -1,30 +1,30 @@
 [
   {
-    "id": "asdma-golaghat",
-    "district": "Golaghat",
-    "districtId": "golaghat",
-    "location": "Golaghat district",
-    "status": "flooded",
-    "description": "ASDMA report 15 Aug 2026: 12,641 people affected, 64 villages, 3 relief camps. Revenue circles — Golaghat: 0 people, 150 ha crop; Khumtai: 2,704 people, 360 ha crop; Dergaon: 1,529 people, 530 ha crop; Morongi: 253 people, 65 ha crop; Bokakhat: 8,155 people, 20 ha crop.",
-    "lastUpdated": "2026-08-15T08:00:00Z",
+    "id": "asdma-dhemaji",
+    "district": "Dhemaji",
+    "districtId": "dhemaji",
+    "location": "Dhemaji district",
+    "status": "waterlogging",
+    "description": "ASDMA report 16 Aug 2026: 1,265 people affected, 2 villages, 0 relief camps.",
+    "lastUpdated": "2026-08-16T08:00:00Z",
     "coordinates": {
-      "lat": 26.5234,
-      "lng": 93.9623
+      "lat": 27.4855,
+      "lng": 94.556
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
   },
   {
-    "id": "asdma-hojai",
-    "district": "Hojai",
-    "districtId": "hojai",
-    "location": "Hojai district",
+    "id": "asdma-golaghat",
+    "district": "Golaghat",
+    "districtId": "golaghat",
+    "location": "Golaghat district",
     "status": "waterlogging",
-    "description": "ASDMA report 15 Aug 2026: 0 people affected, 4 villages, 0 relief camps. Revenue circles — Doboka: 0 people, 126 ha crop.",
-    "lastUpdated": "2026-08-15T08:00:00Z",
+    "description": "ASDMA report 16 Aug 2026: 5,370 people affected, 40 villages, 1 relief camps. Revenue circles — Golaghat: 0 people, 85 ha crop; Khumtai: 1,845 people, 240 ha crop; Bokakhat: 3,097 people, 15 ha crop; Dergaon: 428 people, 220 ha crop.",
+    "lastUpdated": "2026-08-16T08:00:00Z",
     "coordinates": {
-      "lat": 26.0,
-      "lng": 92.8667
+      "lat": 26.5234,
+      "lng": 93.9623
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -34,9 +34,9 @@
     "district": "Jorhat",
     "districtId": "jorhat",
     "location": "Jorhat district",
-    "status": "flooded",
-    "description": "ASDMA report 15 Aug 2026: 8,523 people affected, 40 villages, 6 relief camps. Revenue circles — Teok: 6,701 people, 325 ha crop; Jorhat West: 1,822 people; Jorhat East: 0 people, 34.26 ha crop.",
-    "lastUpdated": "2026-08-15T08:00:00Z",
+    "status": "waterlogging",
+    "description": "ASDMA report 16 Aug 2026: 7,426 people affected, 37 villages, 3 relief camps. Revenue circles — Teok: 5,990 people, 325 ha crop; Jorhat East: 0 people, 13 ha crop; Jorhat West: 1,436 people.",
+    "lastUpdated": "2026-08-16T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
@@ -50,8 +50,8 @@
     "districtId": "nagaon",
     "location": "Nagaon district",
     "status": "flooded",
-    "description": "ASDMA report 15 Aug 2026: 33,332 people affected, 88 villages, 8 relief camps. Revenue circles — Kampur: 0 people, 374 ha crop; Nagaon: 1,869 people, 280 ha crop; Samaguri: 31,463 people, 2334.17 ha crop; Rupahi: 0 people, 50 ha crop.",
-    "lastUpdated": "2026-08-15T08:00:00Z",
+    "description": "ASDMA report 16 Aug 2026: 32,132 people affected, 71 villages, 5 relief camps. Revenue circles — Samaguri: 31,463 people, 2334.17 ha crop; Rupahi: 0 people, 70 ha crop; Nagaon: 669 people, 120 ha crop.",
+    "lastUpdated": "2026-08-16T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -65,8 +65,8 @@
     "districtId": "sivasagar",
     "location": "Sivasagar district",
     "status": "flooded",
-    "description": "ASDMA report 15 Aug 2026: 7,947 people affected, 39 villages, 11 relief camps. Revenue circles — Amguri: 1,110 people, 71 ha crop; Sivsagar: 6,720 people, 135 ha crop; Nazira: 117 people, 100 ha crop.",
-    "lastUpdated": "2026-08-15T08:00:00Z",
+    "description": "ASDMA report 16 Aug 2026: 5,676 people affected, 20 villages, 5 relief camps. Revenue circles — Amguri: 1,099 people, 71 ha crop; Nazira: 53 people, 50 ha crop; Sivsagar: 4,524 people, 85 ha crop.",
+    "lastUpdated": "2026-08-16T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
