@@ -340,7 +340,7 @@ CIRCLE_DETAIL_RE = re.compile(
 # Relief Camps section: District | Total | ReliefCamp count | (details) | RDC count | (details)
 # Capture Total (grp 2), Relief-Camp count (grp 3), and RDC count if present.
 CAMP_LINE_RE = re.compile(
-    rf"^\s*(?:/?\s*Centres\s+|Camps\s*/\s*Centres\s+Opened\s*|Centres\s+Opened\s*|Opened\s*|Camps\s*/\s*)?"
+    rf"^\s*(?:Relief\s+|/?\s*Centres\s+|Camps\s*/\s*Centres\s+Opened\s*|Centres\s+Opened\s*|Opened\s*|Camps\s*/\s*)?"
     rf"({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\b"
 )
 # Human lives lost — Total is the 3rd column after District, first is a "date"
@@ -592,9 +592,10 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     # --- Relief Camps opened section ---
     camps_block = slice_section(
         full,
-        r"Relief\s+Camps\s+District\s+Total|Relief\s+District\s+Total\s+Relief\s+Camp|Relief\s+Camps\s*/\s*Centres\s+Opened",
+        r"District\s+Total\s+Relief\s+Camp|Relief\s+Camps\s+District\s+Total|Relief\s+District\s+Total\s+Relief\s+Camp|Relief\s+Camps\s*/\s*Centres\s+Opened",
         [
             r"Inmates\s+In\b",
+            r"Inmates\s+District\s+Total",
             r"Non\s*Camp\b",
             r"Human\s+Lives",
             r"Animals\s+District",
