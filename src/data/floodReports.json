@@ -1,27 +1,12 @@
 [
   {
-    "id": "asdma-biswanath",
-    "district": "Biswanath",
-    "districtId": "biswanath",
-    "location": "Biswanath district",
-    "status": "waterlogging",
-    "description": "ASDMA report 17 Aug 2026: 0 people affected, 3 villages, 0 relief camps. Revenue circles — Halem: 0 people, 13.6 ha crop.",
-    "lastUpdated": "2026-08-17T08:00:00Z",
-    "coordinates": {
-      "lat": 26.7333,
-      "lng": 93.15
-    },
-    "coordinatesNote": "Approximate district headquarters location",
-    "source": "ASDMA Daily Flood Report"
-  },
-  {
     "id": "asdma-golaghat",
     "district": "Golaghat",
     "districtId": "golaghat",
     "location": "Golaghat district",
     "status": "waterlogging",
-    "description": "ASDMA report 17 Aug 2026: 2,606 people affected, 39 villages, 1 relief camps. Revenue circles — Golaghat: 163 people, 40 ha crop; Khumtai: 1,040 people, 180 ha crop; Dergaon: 332 people, 150 ha crop; Bokakhat: 1,071 people, 10 ha crop.",
-    "lastUpdated": "2026-08-17T08:00:00Z",
+    "description": "ASDMA report 18 Aug 2026: 512 people affected, 33 villages, 1 relief camps. Revenue circles — Golaghat: 174 people, 40 ha crop; Dergaon: 33 people, 80 ha crop; Bokakhat: 305 people, 5 ha crop; Khumtai: 0 people, 150 ha crop.",
+    "lastUpdated": "2026-08-18T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -35,11 +20,26 @@
     "districtId": "jorhat",
     "location": "Jorhat district",
     "status": "waterlogging",
-    "description": "ASDMA report 17 Aug 2026: 5,397 people affected, 31 villages, 2 relief camps. Revenue circles — Jorhat West: 1,121 people; Teok: 4,276 people, 114 ha crop; Jorhat East: 0 people, 11 ha crop.",
-    "lastUpdated": "2026-08-17T08:00:00Z",
+    "description": "ASDMA report 18 Aug 2026: 3,435 people affected, 25 villages, 2 relief camps. Revenue circles — Jorhat West: 903 people; Teok: 2,532 people, 95 ha crop; Jorhat East: 0 people, 25 ha crop.",
+    "lastUpdated": "2026-08-18T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-karbi-anglong",
+    "district": "Karbi Anglong",
+    "districtId": "karbi-anglong",
+    "location": "Karbi Anglong district",
+    "status": "waterlogging",
+    "description": "ASDMA report 18 Aug 2026: 661 people affected, 2 villages, 0 relief camps. Revenue circles — Phuloni: 661 people.",
+    "lastUpdated": "2026-08-18T08:00:00Z",
+    "coordinates": {
+      "lat": 26.0,
+      "lng": 93.45
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -50,8 +50,8 @@
     "districtId": "nagaon",
     "location": "Nagaon district",
     "status": "flooded",
-    "description": "ASDMA report 17 Aug 2026: 19,335 people affected, 54 villages, 3 relief camps. Revenue circles — Nagaon: 383 people, 55 ha crop; Samaguri: 18,952 people, 2334.17 ha crop; Rupahi: 0 people, 102 ha crop.",
-    "lastUpdated": "2026-08-17T08:00:00Z",
+    "description": "ASDMA report 18 Aug 2026: 14,900 people affected, 35 villages, 0 relief camps. Revenue circles — Samaguri: 14,900 people, 2532 ha crop; Rupahi: 0 people, 102 ha crop.",
+    "lastUpdated": "2026-08-18T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -65,8 +65,8 @@
     "districtId": "sivasagar",
     "location": "Sivasagar district",
     "status": "flooded",
-    "description": "ASDMA report 17 Aug 2026: 4,580 people affected, 20 villages, 5 relief camps. Revenue circles — Sivsagar: 3,468 people, 71 ha crop; Amguri: 1,059 people, 68 ha crop; Nazira: 53 people, 50 ha crop.",
-    "lastUpdated": "2026-08-17T08:00:00Z",
+    "description": "ASDMA report 18 Aug 2026: 4,368 people affected, 20 villages, 5 relief camps. Revenue circles — Amguri: 1,049 people, 65 ha crop; Nazira: 53 people, 50 ha crop; Sivsagar: 3,266 people, 62 ha crop.",
+    "lastUpdated": "2026-08-18T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378

@@ -492,26 +492,37 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
                 seen.add(r)
 
     # --- Affected districts list ---
-    # Format: "12 Golaghat, Charaideo, Dibrugarh, Hojai, Nagaon, Biswanath, ..."
-    # (Count on its own line, then the comma-separated names)
+    # Formats:
+    #   "Name of Affected Districts\n12 Golaghat, Charaideo, …"
+    #   "Name of Affected Districts\nAffected 5 Golaghat, Sivasagar, …"
     ad_match = re.search(
-        r"Name of Affected Districts.*?\n\s*(\d+)\s+([^\n]+)",
+        r"Name of Affected Districts\s*\n\s*(?:Affected\s+)?(\d+)\s+([A-Za-z][^\n]+)",
         full,
-        re.DOTALL,
     )
     if ad_match:
+        result["_affectedDistrictCount"] = to_int(ad_match.group(1))
         raw = ad_match.group(2)
-        # Continuation line if names wrap
         m2 = re.search(
-            r"Name of Affected Districts.*?\n\s*\d+\s+[^\n]+\n\s*([A-Za-z][A-Za-z ,\-\(\)]+)",
+            r"Name of Affected Districts\s*\n\s*(?:Affected\s+)?\d+\s+[^\n]+\n\s*([A-Za-z][A-Za-z ,\-]+)",
             full,
-            re.DOTALL,
         )
         if m2 and "," in m2.group(1):
             raw += " " + m2.group(1)
-        result["affectedDistricts"] = [
-            d.strip() for d in raw.split(",") if d.strip() and len(d.strip()) <= 40
-        ]
+        known = {n.lower(): n for n in DISTRICTS}
+        names: list[str] = []
+        for part in raw.split(","):
+            token = re.sub(r"\s+", " ", part).strip(" .")
+            if not token or "|" in token or len(token) > 40:
+                continue
+            hit = known.get(token.lower())
+            if not hit:
+                for canon, orig in known.items():
+                    if token.lower().startswith(canon) or canon.startswith(token.lower()):
+                        hit = orig
+                        break
+            if hit and hit not in names:
+                names.append(hit)
+        result["affectedDistricts"] = names
 
     # --- Population & Crop Area section ---
     # Headers vary by PDF export: "Population District Male…" vs wrapped
@@ -895,7 +906,9 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
         total_inmates = int(parsed["_inmatesTotal"])
     flooded_count = sum(1 for d in districts_out if d["severity"] != "normal")
     # Prefer official affected-district count from the PDF header when present.
-    if parsed.get("affectedDistricts"):
+    if parsed.get("_affectedDistrictCount"):
+        flooded_count = int(parsed["_affectedDistrictCount"])
+    elif parsed.get("affectedDistricts"):
         flooded_count = len(parsed["affectedDistricts"])
 
     stats = {
