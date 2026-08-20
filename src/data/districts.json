@@ -1,7 +1,7 @@
 [
   {
-    "id": "bongaigaon",
-    "name": "Bongaigaon",
+    "id": "cachar",
+    "name": "Cachar",
     "severity": "normal",
     "affectedVillages": 0,
     "river": null,
@@ -10,10 +10,29 @@
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
-      "lat": 26.4833,
-      "lng": 90.55
+      "lat": 24.8333,
+      "lng": 92.7789
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+  },
+  {
+    "id": "charaideo",
+    "name": "Charaideo",
+    "severity": "normal",
+    "affectedVillages": 0,
+    "river": null,
+    "populationAffected": 0,
+    "reliefCamps": 0,
+    "campInmates": 0,
+    "cropAreaHa": 0.0,
+    "humanLivesLost": 0,
+    "lastUpdated": "2026-08-19T08:00:00Z",
+    "coordinates": {
+      "lat": 27.0333,
+      "lng": 95.0
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report (SDRF/DFR)"
@@ -29,7 +48,7 @@
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 27.4728,
       "lng": 94.912
@@ -41,14 +60,14 @@
     "id": "golaghat",
     "name": "Golaghat",
     "severity": "moderate",
-    "affectedVillages": 33,
+    "affectedVillages": 20,
     "river": null,
-    "populationAffected": 512,
+    "populationAffected": 282,
     "reliefCamps": 1,
     "campInmates": 19,
-    "cropAreaHa": 275.0,
+    "cropAreaHa": 140.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -60,14 +79,14 @@
     "id": "jorhat",
     "name": "Jorhat",
     "severity": "moderate",
-    "affectedVillages": 25,
+    "affectedVillages": 23,
     "river": null,
-    "populationAffected": 3435,
-    "reliefCamps": 2,
-    "campInmates": 89,
-    "cropAreaHa": 120.0,
+    "populationAffected": 2594,
+    "reliefCamps": 1,
+    "campInmates": 55,
+    "cropAreaHa": 117.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
@@ -78,15 +97,15 @@
   {
     "id": "karbi-anglong",
     "name": "Karbi Anglong",
-    "severity": "waterlogging",
-    "affectedVillages": 2,
+    "severity": "normal",
+    "affectedVillages": 0,
     "river": null,
-    "populationAffected": 661,
+    "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
     "cropAreaHa": 0.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 26.0,
       "lng": 93.45
@@ -97,15 +116,15 @@
   {
     "id": "nagaon",
     "name": "Nagaon",
-    "severity": "severe",
-    "affectedVillages": 35,
+    "severity": "moderate",
+    "affectedVillages": 30,
     "river": null,
-    "populationAffected": 14900,
+    "populationAffected": 9793,
     "reliefCamps": 0,
     "campInmates": 0,
     "cropAreaHa": 2634.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -117,17 +136,36 @@
     "id": "sivasagar",
     "name": "Sivasagar",
     "severity": "severe",
-    "affectedVillages": 20,
+    "affectedVillages": 17,
     "river": null,
-    "populationAffected": 4368,
+    "populationAffected": 4253,
     "reliefCamps": 5,
-    "campInmates": 207,
-    "cropAreaHa": 177.0,
+    "campInmates": 188,
+    "cropAreaHa": 166.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-08-18T08:00:00Z",
+    "lastUpdated": "2026-08-19T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+  },
+  {
+    "id": "udalguri",
+    "name": "Udalguri",
+    "severity": "normal",
+    "affectedVillages": 0,
+    "river": null,
+    "populationAffected": 0,
+    "reliefCamps": 0,
+    "campInmates": 0,
+    "cropAreaHa": 0.0,
+    "humanLivesLost": 0,
+    "lastUpdated": "2026-08-19T08:00:00Z",
+    "coordinates": {
+      "lat": 26.7536,
+      "lng": 92.102
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report (SDRF/DFR)"

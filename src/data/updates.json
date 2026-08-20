@@ -1,15 +1,15 @@
 [
   {
-    "id": "asdma-2026-08-18",
-    "title": "ASDMA Daily Flood Report — 18 Aug 2026",
-    "date": "2026-08-18T08:00:00Z",
+    "id": "asdma-2026-08-19",
+    "title": "ASDMA Daily Flood Report — 19 Aug 2026",
+    "date": "2026-08-19T08:00:00Z",
     "source": "ASDMA / SDRF",
-    "summary": "5 districts affected. 23,876 people affected across 115 villages. 8 relief camps with 315 inmates. Rivers above danger level: Dhansiri (S). Source: https://sdrf.assam.gov.in/dfr/"
+    "summary": "4 districts affected. 16,922 people affected across 90 villages. 7 relief camps with 262 inmates. Rivers above danger level: Dhansiri (S). Source: https://sdrf.assam.gov.in/dfr/"
   },
   {
-    "id": "cwc-danger-2026-08-18",
+    "id": "cwc-danger-2026-08-19",
     "title": "CWC: rivers flowing above danger level",
-    "date": "2026-08-18T08:00:00Z",
+    "date": "2026-08-19T08:00:00Z",
     "source": "CWC via ASDMA",
     "summary": "Dhansiri (S)"
   }

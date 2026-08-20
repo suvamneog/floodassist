@@ -495,16 +495,29 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     # Formats:
     #   "Name of Affected Districts\n12 Golaghat, Charaideo, …"
     #   "Name of Affected Districts\nAffected 5 Golaghat, Sivasagar, …"
+    #   "Name of Affected Districts\nAffected Districts\nAffected\n4 Sivasagar, …"
     ad_match = re.search(
-        r"Name of Affected Districts\s*\n\s*(?:Affected\s+)?(\d+)\s+([A-Za-z][^\n]+)",
+        r"Name of Affected Districts.{0,200}?\n\s*(?:Affected\s+)?"
+        r"(\d+)\s+([A-Z][A-Za-z][^\n]*?(?:,\s*[A-Z][A-Za-z][^\n]*)+)",
         full,
+        re.DOTALL,
     )
+    if not ad_match:
+        # Single-district day (no commas)
+        ad_match = re.search(
+            r"Name of Affected Districts.{0,200}?\n\s*(?:Affected\s+)?"
+            r"(\d+)\s+([A-Z][A-Za-z][A-Za-z \-]{2,40})\s*$",
+            full,
+            re.DOTALL | re.MULTILINE,
+        )
     if ad_match:
         result["_affectedDistrictCount"] = to_int(ad_match.group(1))
         raw = ad_match.group(2)
         m2 = re.search(
-            r"Name of Affected Districts\s*\n\s*(?:Affected\s+)?\d+\s+[^\n]+\n\s*([A-Za-z][A-Za-z ,\-]+)",
+            r"Name of Affected Districts.{0,200}?\n\s*(?:Affected\s+)?"
+            r"\d+\s+[^\n]+\n\s*([A-Z][A-Za-z][A-Za-z ,\-]+)",
             full,
+            re.DOTALL,
         )
         if m2 and "," in m2.group(1):
             raw += " " + m2.group(1)
