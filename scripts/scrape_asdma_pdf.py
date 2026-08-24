@@ -325,10 +325,11 @@ DISTRICT_NAMES_RE = "|".join(
 )
 
 # Population line: District Male Female Children Total Crop
-# Optional header-fragment prefixes ("And Crop"/"Area"/"Submerged") leak when
-# pdfplumber wraps the section title onto the first district row.
+# pdfplumber often wraps section titles onto the first district row(s), e.g.
+# "on And Cachar …" (from Populati/on And) or "ged Golaghat …" (from Submer/ged).
+# Allow a few leftover word fragments before the district name.
 POP_LINE_RE = re.compile(
-    rf"^\s*(?:And\s+Crop|Crop\s+Area|Crop|Area|Submerged|Submerge|d|ed)?\s*"
+    rf"^\s*(?:[A-Za-z]{{1,12}}\s+){{0,4}}"
     rf"({DISTRICT_NAMES_RE})\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+(\d[\d,]*)\s+([\d,\.]+)"
 )
 # Circle-level detail inside Population section
