@@ -1,15 +1,15 @@
 [
   {
-    "id": "asdma-cachar",
-    "district": "Cachar",
-    "districtId": "cachar",
-    "location": "Cachar district",
+    "id": "asdma-dhemaji",
+    "district": "Dhemaji",
+    "districtId": "dhemaji",
+    "location": "Dhemaji district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Aug 2026: 105 people affected, 1 villages, 0 relief camps. Revenue circles — Sonai: 105 people.",
-    "lastUpdated": "2026-08-24T08:00:00Z",
+    "description": "ASDMA report 25 Aug 2026: 712 people affected, 2 villages, 0 relief camps.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
     "coordinates": {
-      "lat": 24.8333,
-      "lng": 92.7789
+      "lat": 27.4855,
+      "lng": 94.556
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -20,8 +20,8 @@
     "districtId": "golaghat",
     "location": "Golaghat district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Aug 2026: 1,141 people affected, 17 villages, 0 relief camps. Revenue circles — Golaghat: 1,141 people, 10 ha crop; Bokakhat: 0 people, 3 ha crop.",
-    "lastUpdated": "2026-08-24T08:00:00Z",
+    "description": "ASDMA report 25 Aug 2026: 2,022 people affected, 15 villages, 0 relief camps. Revenue circles — Bokakhat: 0 people, 3 ha crop; Golaghat: 2,022 people, 10 ha crop.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
     "coordinates": {
       "lat": 26.5234,
       "lng": 93.9623
@@ -35,11 +35,26 @@
     "districtId": "jorhat",
     "location": "Jorhat district",
     "status": "waterlogging",
-    "description": "ASDMA report 24 Aug 2026: 101 people affected, 7 villages, 0 relief camps. Revenue circles — Teok: 0 people, 90 ha crop; Jorhat West: 101 people.",
-    "lastUpdated": "2026-08-24T08:00:00Z",
+    "description": "ASDMA report 25 Aug 2026: 101 people affected, 7 villages, 0 relief camps. Revenue circles — Teok: 0 people, 62 ha crop; Jorhat West: 101 people.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
     "coordinates": {
       "lat": 26.7509,
       "lng": 94.2037
+    },
+    "coordinatesNote": "Approximate district headquarters location",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
+    "id": "asdma-karbi-anglong",
+    "district": "Karbi Anglong",
+    "districtId": "karbi-anglong",
+    "location": "Karbi Anglong district",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Aug 2026: 536 people affected, 1 villages, 0 relief camps. Revenue circles — Diphu: 536 people.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
+    "coordinates": {
+      "lat": 26.0,
+      "lng": 93.45
     },
     "coordinatesNote": "Approximate district headquarters location",
     "source": "ASDMA Daily Flood Report"
@@ -50,8 +65,8 @@
     "districtId": "nagaon",
     "location": "Nagaon district",
     "status": "flooded",
-    "description": "ASDMA report 24 Aug 2026: 14,852 people affected, 53 villages, 0 relief camps. Revenue circles — Rupahi: 3,490 people, 588.39 ha crop; Samaguri: 11,362 people, 2532 ha crop.",
-    "lastUpdated": "2026-08-24T08:00:00Z",
+    "description": "ASDMA report 25 Aug 2026: 17,044 people affected, 59 villages, 0 relief camps. Revenue circles — Samaguri: 13,554 people, 3619.46 ha crop; Rupahi: 3,490 people, 588.39 ha crop.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
@@ -64,9 +79,9 @@
     "district": "Sivasagar",
     "districtId": "sivasagar",
     "location": "Sivasagar district",
-    "status": "flooded",
-    "description": "ASDMA report 24 Aug 2026: 3,011 people affected, 13 villages, 5 relief camps. Revenue circles — Amguri: 674 people, 15 ha crop; Sivsagar: 2,284 people, 24 ha crop; Nazira: 53 people, 47 ha crop.",
-    "lastUpdated": "2026-08-24T08:00:00Z",
+    "status": "waterlogging",
+    "description": "ASDMA report 25 Aug 2026: 2,248 people affected, 9 villages, 4 relief camps. Revenue circles — Sivsagar: 2,105 people, 20 ha crop; Nazira: 53 people; Amguri: 90 people, 8 ha crop.",
+    "lastUpdated": "2026-08-25T08:00:00Z",
     "coordinates": {
       "lat": 26.9844,
       "lng": 94.6378
