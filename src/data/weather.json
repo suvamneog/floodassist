@@ -7,7 +7,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above danger level as per today's CWC bulletin.",
-    "validUntil": "2026-08-27T08:00:00Z",
+    "validUntil": "2026-08-28T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -18,18 +18,18 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above highest flood level today.",
-    "validUntil": "2026-08-27T08:00:00Z",
+    "validUntil": "2026-08-28T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
     "id": "asdma-impact",
     "type": "impact",
     "title": "Flood Impact Snapshot",
-    "level": "warning",
-    "value": "4 districts",
-    "unit": "19,626 people affected",
-    "description": "ASDMA report as on 27 Aug 2026: 2 relief camps housing 57 inmates.",
-    "validUntil": "2026-08-27T08:00:00Z",
+    "level": "orange",
+    "value": "5 districts",
+    "unit": "19,796 people affected",
+    "description": "ASDMA report as on 28 Aug 2026: 2 relief camps housing 57 inmates.",
+    "validUntil": "2026-08-28T08:00:00Z",
     "source": "ASDMA Daily Flood Report"
   }
 ]
