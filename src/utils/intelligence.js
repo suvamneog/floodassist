@@ -54,7 +54,14 @@ export function generateDailySummary({ stats, districts = [], weather = [], meta
   if (!stats) return null
 
   const affected = [...districts]
-    .filter((d) => (d.populationAffected || 0) > 0 || d.severity === 'severe' || d.severity === 'moderate')
+    .filter(
+      (d) =>
+        (d.populationAffected || 0) > 0 ||
+        d.severity === 'affected' ||
+        d.severity === 'severe' ||
+        d.severity === 'moderate' ||
+        d.severity === 'waterlogging'
+    )
     .sort((a, b) => (b.populationAffected || 0) - (a.populationAffected || 0))
 
   const flooded = stats.floodedDistricts ?? affected.length
@@ -118,13 +125,16 @@ export function generateDistrictSummary(district) {
   const villages = district.affectedVillages || 0
   const inmates = district.campInmates || 0
   const severity = district.severity || 'normal'
+  const listed =
+    severity === 'affected' ||
+    ['severe', 'moderate', 'waterlogging'].includes(severity)
 
-  if (severity === 'normal' && pop === 0) {
-    return `${district.name} currently shows no significant flood impact in the latest ASDMA report. Continue monitoring local advisories.`
+  if (!listed && pop === 0) {
+    return `${district.name} is not listed as affected in the latest ASDMA daily report. Continue monitoring local advisories.`
   }
 
   const parts = [
-    `${district.name} is under ${severity} flood conditions with ${formatIndianNumber(pop)} people affected`,
+    `${district.name} is listed as affected in the ASDMA daily report with ${formatIndianNumber(pop)} people affected`,
   ]
   if (villages > 0) parts[0] += ` across ${formatIndianNumber(villages)} villages`
   parts[0] += '.'
@@ -162,7 +172,9 @@ export function generateRecommendations({ stats, districts = [], weather = [] })
   const riverCard = weather.find((w) => w.id === 'asdma-cwc-danger')
   const riverFlood = weather.find((w) => w.id === 'asdma-cwc-flood')
   const riverCount = stats?.activeAlerts ?? stats?.riverWarnings ?? 0
-  const severe = districts.filter((d) => d.severity === 'severe')
+  const highImpact = districts.filter(
+    (d) => (d.populationAffected || 0) >= 10000 || (d.reliefCamps || 0) >= 5
+  )
   const shortage = districts.filter(
     (d) => (d.populationAffected || 0) > 0 && (d.reliefCamps || 0) === 0
   )
@@ -215,12 +227,12 @@ export function generateRecommendations({ stats, districts = [], weather = [] })
     })
   }
 
-  if (severe.length >= 3) {
+  if (highImpact.length >= 3) {
     tips.push({
-      id: 'multi-severe',
+      id: 'multi-high-impact',
       priority: 'medium',
-      title: 'Multi-district severe response',
-      description: `${severe.length} districts are marked severe (${severe
+      title: 'Multi-district high impact',
+      description: `${highImpact.length} districts have 10,000+ people affected or 5+ camps (${highImpact
         .slice(0, 3)
         .map((d) => d.name)
         .join(', ')}). Prioritise SDRF deployment and inter-district coordination.`,
@@ -389,7 +401,7 @@ export function buildTrendSeries(historyReports = []) {
 
 export function rankDistricts(districts = [], limit = 10) {
   return [...districts]
-    .filter((d) => (d.populationAffected || 0) > 0 || d.severity === 'severe' || d.severity === 'moderate')
+    .filter((d) => (d.populationAffected || 0) > 0 || d.severity === 'affected' || d.severity === 'severe' || d.severity === 'moderate' || d.severity === 'waterlogging')
     .sort((a, b) => (b.populationAffected || 0) - (a.populationAffected || 0))
     .slice(0, limit)
 }

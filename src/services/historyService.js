@@ -40,9 +40,10 @@ export const getReportByDate = async (date) => {
 }
 
 const STATUS_FROM_SEVERITY = {
-  severe: 'flooded',
-  moderate: 'flooded',
-  waterlogging: 'waterlogging',
+  affected: 'affected',
+  severe: 'affected',
+  moderate: 'affected',
+  waterlogging: 'affected',
   normal: 'safe',
 }
 

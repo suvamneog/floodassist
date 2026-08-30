@@ -38,7 +38,7 @@ export default function Emergency() {
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
         title="Emergency Contacts"
-        subtitle="Official Assam disaster and emergency helplines. Tap any card to call."
+        subtitle="Published Assam / national emergency numbers. Same published lines — not a live call-centre feed. Tap any card to call."
       />
 
       {loading || !contacts ? (
@@ -79,6 +79,18 @@ export default function Emergency() {
                     Call
                   </span>
                 </div>
+                <p className="mt-4 text-[11px] leading-relaxed text-slate-400">
+                  Source: {c.source}
+                  {c.lastVerified ? ` · Verified ${c.lastVerified}` : ''}
+                  {c.sourceUrl ? (
+                    <>
+                      {' · '}
+                      <span className="underline decoration-slate-300">
+                        {new URL(c.sourceUrl).hostname}
+                      </span>
+                    </>
+                  ) : null}
+                </p>
               </motion.a>
             )
           })}

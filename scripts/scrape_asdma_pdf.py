@@ -745,23 +745,22 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 # Transform → React app schemas
 # ---------------------------------------------------------------------------
-def severity_for(population: int, camps: int, is_affected: bool) -> str:
-    if population >= 10_000 or camps >= 5:
-        return "severe"
-    if population >= 1_000 or camps >= 1:
-        return "moderate"
-    if population > 0 or is_affected:
-        return "waterlogging"
+def severity_for(
+    population: int, camps: int, villages: int, is_affected: bool
+) -> str:
+    """ASDMA-backed district flag only — not an official Severe/Moderate code.
+
+    ASDMA lists affected districts and counts; it does not publish severity
+    badges. We mark a district ``affected`` when it appears on that list or
+    has verified people / camps / villages in the same PDF.
+    """
+    if is_affected or population > 0 or camps > 0 or villages > 0:
+        return "affected"
     return "normal"
 
 
 def flood_status_for(severity: str) -> str:
-    return {
-        "severe": "flooded",
-        "moderate": "waterlogging",
-        "waterlogging": "waterlogging",
-        "normal": "safe",
-    }[severity]
+    return "affected" if severity == "affected" else "safe"
 
 
 def rivers_for_district(rivers: dict[str, list[str]], district: str) -> str | None:
@@ -821,7 +820,8 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
         villages = int(parsed["villages"].get(name, 0))
         circles = pop.get("circles", []) or []
         is_affected = name in affected_names
-        sev = severity_for(population, camps, is_affected)
+        vill_count = villages or len([c for c in circles if c["population"] > 0])
+        sev = severity_for(population, camps, vill_count, is_affected)
 
         # Human lives lost from this month/day
         hll = int(parsed["hll"].get(name, 0))
@@ -835,9 +835,9 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
             {
                 "id": d_slug,
                 "name": name,
-                # Impact level derived from ASDMA population/camp counts (not an official severity code)
+                # ASDMA affected / not listed — not an official Severe/Moderate code
                 "severity": sev,
-                "affectedVillages": villages or len([c for c in circles if c["population"] > 0]),
+                "affectedVillages": vill_count,
                 "river": river_names,
                 "populationAffected": population,
                 "reliefCamps": camps,
@@ -846,7 +846,7 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
                 "humanLivesLost": hll,
                 "lastUpdated": last_updated,
                 "coordinates": coords,
-                "coordinatesNote": "Approximate district headquarters location",
+                "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
                 "source": "ASDMA Daily Flood Report (SDRF/DFR)",
             }
         )
@@ -885,7 +885,7 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
                 "description": description,
                 "lastUpdated": last_updated,
                 "coordinates": coords,
-                "coordinatesNote": "Approximate district headquarters location",
+                "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
                 "source": "ASDMA Daily Flood Report",
             }
         )
@@ -908,7 +908,7 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
                     "campInmates": inmates,
                     "phone": "1077",
                     "coordinates": coords,
-                    "coordinatesNote": "Approximate district headquarters location",
+                    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
                     "source": "ASDMA Daily Flood Report",
                 }
             )

@@ -10,7 +10,7 @@ import ReportDateFilter from '../components/ui/ReportDateFilter'
 import EmptyState from '../components/ui/EmptyState'
 import ErrorState from '../components/ui/ErrorState'
 import { Skeleton } from '../components/ui/Skeleton'
-import { FLOOD_STATUS, formatRelative } from '../utils/helpers'
+import { FLOOD_STATUS, formatRelative, normalizeFloodStatus } from '../utils/helpers'
 import Badge from '../components/ui/Badge'
 import { useFetch } from '../hooks/useFetch'
 import { getDashboardForDate, getReportDates } from '../services/historyService'
@@ -43,7 +43,7 @@ export default function FloodMapPage() {
       )
     }
     if (status !== 'all') {
-      rows = rows.filter((r) => r.status === status)
+      rows = rows.filter((r) => normalizeFloodStatus(r.status) === status)
     }
     return rows
   }, [dashboard, district, status])
@@ -61,8 +61,8 @@ export default function FloodMapPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <PageHeader
-        title="Live Flood Map"
-        subtitle="Districts are shaded by severity — tap any district or pin for details."
+        title="Flood Map"
+        subtitle="Shaded by ASDMA people-affected counts. Pins mark approximate district HQ — not camp GPS. Same-day official report, not realtime gauges."
       >
         <div className="mb-4">
           <ReportDateFilter
@@ -118,7 +118,7 @@ export default function FloodMapPage() {
                 className="h-2.5 w-2.5 rounded-full"
                 style={{ background: val.map }}
               />
-              {val.label} pin
+              {val.label} · district HQ pin
             </span>
           ))}
         </div>
@@ -160,7 +160,8 @@ export default function FloodMapPage() {
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {reports.map((r) => {
-            const s = FLOOD_STATUS[r.status] || FLOOD_STATUS.safe
+            const s =
+              FLOOD_STATUS[normalizeFloodStatus(r.status)] || FLOOD_STATUS.safe
             return (
               <div
                 key={r.id}

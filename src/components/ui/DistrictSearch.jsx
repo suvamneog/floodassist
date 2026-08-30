@@ -2,7 +2,7 @@ import { useState, useRef, useEffect, useMemo } from 'react'
 import { Search, MapPin, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Badge from './Badge'
-import { SEVERITY } from '../../utils/helpers'
+import { SEVERITY, normalizeSeverity } from '../../utils/helpers'
 
 /**
  * Autocomplete search across districts.
@@ -105,7 +105,7 @@ export default function DistrictSearch({
               </li>
             ) : (
               results.map((d, i) => {
-                const sev = SEVERITY[d.severity] || SEVERITY.normal
+                const sev = SEVERITY[normalizeSeverity(d.severity)] || SEVERITY.normal
                 return (
                   <li key={d.id}>
                     <button

@@ -22,7 +22,7 @@ export default function Checklist() {
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
         title="Emergency Checklist"
-        subtitle="Prepare your emergency bag. Progress is saved on this device."
+        subtitle="Preparedness kit items aligned with ASDMA flood safety guidance. Progress is saved on this device — not a live inventory feed."
       />
 
       {loading || !items ? (
@@ -80,6 +80,22 @@ export default function Checklist() {
               )
             })}
           </div>
+          {items[0]?.sourceUrl ? (
+            <p className="mt-6 text-xs text-slate-500">
+              Based on{' '}
+              <a
+                href={items[0].sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary-700 underline dark:text-primary-300"
+              >
+                ASDMA Flood Safety Tips
+              </a>
+              {items[0].lastVerified
+                ? ` · Verified ${items[0].lastVerified}`
+                : ''}
+            </p>
+          ) : null}
         </>
       )}
     </div>

@@ -7,7 +7,9 @@
     "icon": "Building2",
     "priority": 1,
     "color": "green",
-    "source": "ASDMA"
+    "source": "ASDMA",
+    "sourceUrl": "https://asdma.assam.gov.in/",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "seoc-1070",
@@ -17,27 +19,33 @@
     "icon": "LifeBuoy",
     "priority": 2,
     "color": "blue",
-    "source": "ASDMA"
+    "source": "ASDMA",
+    "sourceUrl": "https://asdma.assam.gov.in/",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "ambulance",
     "name": "Ambulance",
     "number": "108",
-    "description": "Emergency medical & ambulance services",
+    "description": "National emergency medical & ambulance services",
     "icon": "Ambulance",
     "priority": 3,
     "color": "red",
-    "source": "National Emergency"
+    "source": "National Emergency Number (India)",
+    "sourceUrl": "https://www.india.gov.in/spotlight/national-emergency-number-112",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "police",
     "name": "Police",
     "number": "100",
-    "description": "Assam Police emergency helpline",
+    "description": "Police emergency helpline (also reachable via 112)",
     "icon": "Shield",
     "priority": 4,
     "color": "blue",
-    "source": "National Emergency"
+    "source": "National Emergency Number (India)",
+    "sourceUrl": "https://www.india.gov.in/spotlight/national-emergency-number-112",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "fire",
@@ -47,7 +55,9 @@
     "icon": "Flame",
     "priority": 5,
     "color": "orange",
-    "source": "National Emergency"
+    "source": "National Emergency Number (India)",
+    "sourceUrl": "https://www.india.gov.in/spotlight/national-emergency-number-112",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "deoc-1077",
@@ -57,6 +67,8 @@
     "icon": "PhoneCall",
     "priority": 6,
     "color": "slate",
-    "source": "ASDMA"
+    "source": "ASDMA",
+    "sourceUrl": "https://asdma.assam.gov.in/",
+    "lastVerified": "2026-08-29"
   }
 ]

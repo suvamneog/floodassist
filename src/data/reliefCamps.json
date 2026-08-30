@@ -12,7 +12,7 @@
       "lat": 26.3509,
       "lng": 92.6925
     },
-    "coordinatesNote": "Approximate district headquarters location",
+    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
     "source": "ASDMA Daily Flood Report"
   },
   {
@@ -28,7 +28,7 @@
       "lat": 26.9844,
       "lng": 94.6378
     },
-    "coordinatesNote": "Approximate district headquarters location",
+    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
     "source": "ASDMA Daily Flood Report"
   }
 ]
