@@ -33,7 +33,7 @@ export default function SafetyTips() {
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
         title="Safety Tips"
-        subtitle="Simple steps that can save lives before and during floods."
+        subtitle="From the official ASDMA Flood Safety Tips PDF — published guidance, not a realtime feed."
       />
 
       {loading || !tips ? (
@@ -60,12 +60,29 @@ export default function SafetyTips() {
                   <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                     {tip.description}
                   </p>
+                  <p className="mt-4 text-[11px] leading-relaxed text-slate-400">
+                    {tip.source}
+                    {tip.lastVerified ? ` · Verified ${tip.lastVerified}` : ''}
+                  </p>
                 </Card>
               </motion.div>
             )
           })}
         </div>
       )}
+      {tips?.[0]?.sourceUrl ? (
+        <p className="mt-6 text-xs text-slate-500">
+          Official source:{' '}
+          <a
+            href={tips[0].sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-primary-700 underline dark:text-primary-300"
+          >
+            ASDMA Flood Safety Tips (PDF)
+          </a>
+        </p>
+      ) : null}
     </div>
   )
 }

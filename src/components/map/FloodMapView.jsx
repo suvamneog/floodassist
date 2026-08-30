@@ -1,8 +1,16 @@
 import { useMemo, useState } from 'react'
-import { MapContainer, TileLayer, Marker, Popup, GeoJSON, Tooltip } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet'
 import L from 'leaflet'
 import { Layers } from 'lucide-react'
-import { FLOOD_STATUS, SEVERITY, formatDateTime } from '../../utils/helpers'
+import {
+  FLOOD_STATUS,
+  IMPACT_BAND,
+  impactBand,
+  normalizeFloodStatus,
+  normalizeSeverity,
+  SEVERITY,
+  formatDateTime,
+} from '../../utils/helpers'
 import Badge from '../ui/Badge'
 import assamGeo from '../../data/assamDistricts.geo.json'
 
@@ -42,13 +50,6 @@ const GEO_ALIASES = {
   karimganj: 'sribhumi',
 }
 
-const HEAT_COLORS = {
-  severe: '#ef4444',
-  moderate: '#f97316',
-  waterlogging: '#f59e0b',
-  normal: '#22c55e',
-}
-
 export default function FloodMapView({
   reports = [],
   districts = [],
@@ -58,8 +59,7 @@ export default function FloodMapView({
 
   const icons = useMemo(
     () => ({
-      flooded: createIcon(FLOOD_STATUS.flooded.map),
-      waterlogging: createIcon(FLOOD_STATUS.waterlogging.map),
+      affected: createIcon(FLOOD_STATUS.affected.map),
       safe: createIcon(FLOOD_STATUS.safe.map),
     }),
     []
@@ -76,29 +76,32 @@ export default function FloodMapView({
     return districtById.get(GEO_ALIASES[s] || s) || null
   }
 
-  // Districts absent from the report are treated as Normal
+  // Heat uses ASDMA people/camp count bands — not official severity codes
   const geoStyle = (feature) => {
     const d = lookupDistrict(feature.properties.district)
-    const sev = d?.severity || 'normal'
+    const band = impactBand(d)
+    const color = IMPACT_BAND[band].map
     return {
-      color: HEAT_COLORS[sev],
+      color,
       weight: 1.2,
-      fillColor: HEAT_COLORS[sev],
-      fillOpacity: sev === 'normal' ? 0.12 : 0.35,
+      fillColor: color,
+      fillOpacity: band === 'none' ? 0.12 : 0.35,
     }
   }
 
   const onEachFeature = (feature, layer) => {
     const d = lookupDistrict(feature.properties.district)
-    const sev = SEVERITY[d?.severity] || SEVERITY.normal
+    const sev = SEVERITY[normalizeSeverity(d?.severity)] || SEVERITY.normal
+    const band = IMPACT_BAND[impactBand(d)]
     const name = d?.name || feature.properties.district
     const pop = d?.populationAffected || 0
 
     layer.bindTooltip(
       `<div style="font-weight:700">${escapeHtml(name)}</div>
        <div style="font-size:11px">${escapeHtml(sev.label)}${
-         pop > 0 ? ` · ${escapeHtml(pop.toLocaleString('en-IN'))} affected` : ''
-       }</div>`,
+         pop > 0 ? ` · ${escapeHtml(pop.toLocaleString('en-IN'))} people (ASDMA)` : ''
+       }</div>
+       <div style="font-size:10px;opacity:.85">${escapeHtml(band.label)}</div>`,
       { sticky: true, direction: 'top', opacity: 0.95 }
     )
 
@@ -160,12 +163,13 @@ export default function FloodMapView({
                 Number.isFinite(r?.coordinates?.lng)
             )
             .map((r) => {
-              const status = FLOOD_STATUS[r.status] || FLOOD_STATUS.safe
+              const statusKey = normalizeFloodStatus(r.status)
+              const status = FLOOD_STATUS[statusKey] || FLOOD_STATUS.safe
               return (
                 <Marker
                   key={r.id}
                   position={[r.coordinates.lat, r.coordinates.lng]}
-                  icon={icons[r.status] || icons.safe}
+                  icon={icons[statusKey] || icons.safe}
                 >
                   <Popup>
                     <div className="min-w-[200px] space-y-2">
@@ -180,7 +184,9 @@ export default function FloodMapView({
                         {r.description}
                       </p>
                       <p className="text-[10px] text-slate-400">
-                        Pin ≈ district HQ · Updated {formatDateTime(r.lastUpdated)}
+                        Pin = approximate district HQ (not camp GPS). ASDMA
+                        daily PDF has no camp street coordinates. Updated{' '}
+                        {formatDateTime(r.lastUpdated)}
                       </p>
                     </div>
                   </Popup>
@@ -189,17 +195,24 @@ export default function FloodMapView({
             })}
         </MapContainer>
 
-        {/* Severity legend */}
-        <div className="absolute bottom-3 left-3 z-10 flex max-w-[calc(100%-1.5rem)] flex-wrap gap-2 rounded-xl border border-border bg-white/90 px-3 py-2 text-[11px] font-semibold shadow-md backdrop-blur dark:border-border-dark dark:bg-slate-900/90">
-          {Object.entries(HEAT_COLORS).map(([key, color]) => (
-            <span key={key} className="inline-flex items-center gap-1.5 text-slate-700 dark:text-slate-200">
+        <div className="absolute bottom-3 left-3 z-10 max-w-[calc(100%-1.5rem)] space-y-1 rounded-xl border border-border bg-white/90 px-3 py-2 text-[11px] font-semibold shadow-md backdrop-blur dark:border-border-dark dark:bg-slate-900/90">
+          <p className="text-[10px] font-bold uppercase tracking-wide text-slate-500">
+            People affected (ASDMA counts)
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {Object.entries(IMPACT_BAND).map(([key, band]) => (
               <span
-                className="h-2.5 w-2.5 rounded-sm"
-                style={{ background: color, opacity: 0.8 }}
-              />
-              {SEVERITY[key].label}
-            </span>
-          ))}
+                key={key}
+                className="inline-flex items-center gap-1.5 text-slate-700 dark:text-slate-200"
+              >
+                <span
+                  className="h-2.5 w-2.5 rounded-sm"
+                  style={{ background: band.map, opacity: 0.8 }}
+                />
+                {band.label}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

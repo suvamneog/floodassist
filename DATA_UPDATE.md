@@ -89,11 +89,14 @@ Do **not** leave known undercounts in Past Reports / trend charts.
 | --- | --- |
 | People, villages, camps, inmates, rivers from ASDMA | **Verified** against that day’s PDF |
 | Past Reports snapshots | **Verified** when history was rebuilt from PDFs |
-| Severity badges (Severe / Moderate / …) | **App-derived** for UX — not an ASDMA label |
-| Daily Brief / Situation Guidance / rankings | **Rule-based** from the numbers — not an LLM |
-| Emergency contacts, checklist, safety tips | **Curated** public guidance |
+| District badge (Affected / Not listed) | **ASDMA-backed** — from the PDF affected list / verified counts. ASDMA does **not** publish Severe/Moderate codes |
+| Map heat bands (people ranges) | **From ASDMA people/camp totals** — visual only; not an official severity label |
+| Daily Brief / Situation Guidance / rankings | **Rule-based** from the verified numbers — not an LLM |
+| Emergency contacts, checklist, safety tips | **Published official guidance** with `sourceUrl` + `lastVerified` — not a realtime feed |
 | Donate links | **Outbound only** — we do not verify how funds are spent |
-| Map pin coordinates | District HQ approx. — not camp street GPS |
+| Map pin coordinates | **District HQ approx.** — ASDMA daily PDF has **no** camp street GPS |
+
+Never claim **realtime** gauges, live camp GPS, or official ASDMA severity codes.
 
 ---
 

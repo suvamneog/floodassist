@@ -4,55 +4,71 @@
     "title": "Know your safe route",
     "description": "All family members should know the safe route to the nearest shelter or raised pucca house.",
     "icon": "Mountain",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-kit",
     "title": "Keep an emergency kit ready",
     "description": "Include torch, spare batteries, dry food, drinking water, first-aid, waterproof bags, salt and sugar.",
     "icon": "Briefcase",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-warning",
     "title": "Follow official flood warnings",
     "description": "Tune to local radio/TV. Keep vigil on warnings from local authorities. Ignore rumours and stay calm.",
     "icon": "Radio",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-water",
     "title": "Drink boiled water",
     "description": "Keep food covered. Use ORS / rice-water / tender coconut water during diarrhoea and contact health workers.",
     "icon": "Droplets",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-evacuate",
     "title": "Evacuate safely",
     "description": "Pack warm clothes, medicines, valuables and papers in waterproof bags. Inform local volunteers where you are going.",
     "icon": "Users",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-electricity",
     "title": "Turn off electricity & gas",
     "description": "Switch off electrical and gas appliances, and turn off the main power if you have to leave your home.",
     "icon": "ZapOff",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-floodwater",
     "title": "Avoid flood water",
     "description": "Do not enter flood waters. Watch for snakes. Keep children away from empty stomach and unsafe areas.",
     "icon": "Waves",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   },
   {
     "id": "asdma-return",
     "title": "Return home carefully",
     "description": "Stay away from damaged power lines or buildings. Boil tap water until supplies are declared safe.",
     "icon": "ShieldCheck",
-    "source": "ASDMA Flood Safety Tips"
+    "source": "ASDMA Flood Safety Tips",
+    "sourceUrl": "https://asdma.assam.gov.in/sites/default/files/swf_utility_folder/departments/asdma_revenue_uneecopscloud_com_oid_70/this_comm/flood-safetytips_0.pdf",
+    "lastVerified": "2026-08-29"
   }
 ]

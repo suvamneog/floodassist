@@ -14,7 +14,7 @@ import ErrorState from '../components/ui/ErrorState'
 import { CardSkeleton } from '../components/ui/Skeleton'
 import { useFetch } from '../hooks/useFetch'
 import { getDashboardForDate, getReportDates } from '../services/historyService'
-import { SEVERITY, formatRelative } from '../utils/helpers'
+import { SEVERITY, normalizeSeverity, formatRelative } from '../utils/helpers'
 import { formatReportDate } from '../utils/intelligence'
 
 export default function DistrictStatus() {
@@ -74,7 +74,7 @@ export default function DistrictStatus() {
     <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <PageHeader
         title="District Status"
-        subtitle="Flood severity across Assam districts — tap a card for full insights."
+        subtitle="ASDMA affected districts and verified people / village / camp totals — tap a card for details."
       />
 
       <div className="mb-4">
@@ -141,7 +141,7 @@ export default function DistrictStatus() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {districts.map((d, i) => {
-            const sev = SEVERITY[d.severity] || SEVERITY.normal
+            const sev = SEVERITY[normalizeSeverity(d.severity)] || SEVERITY.normal
             return (
               <motion.div
                 key={d.id}

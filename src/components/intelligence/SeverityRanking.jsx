@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Badge from '../ui/Badge'
 import EmptyState from '../ui/EmptyState'
-import { SEVERITY } from '../../utils/helpers'
+import { SEVERITY, normalizeSeverity } from '../../utils/helpers'
 import {
   formatIndianNumber,
   rankDistricts,
@@ -24,16 +24,16 @@ export default function SeverityRanking({ districts, onSelectDistrict }) {
     <div>
       <div className="mb-4">
         <h2 className="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-          Severity Ranking
+          Most affected districts
         </h2>
         <p className="mt-1 text-sm text-slate-500">
-          Top {ranked.length} worst affected districts by population
+          Ranked by ASDMA people-affected totals (not an official severity code)
         </p>
       </div>
 
       <div className="space-y-2.5">
         {ranked.map((d, i) => {
-          const sev = SEVERITY[d.severity] || SEVERITY.normal
+          const sev = SEVERITY[normalizeSeverity(d.severity)] || SEVERITY.normal
           const pct = Math.round(((d.populationAffected || 0) / maxPop) * 100)
           return (
             <motion.button

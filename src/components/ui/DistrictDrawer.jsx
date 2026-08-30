@@ -13,7 +13,7 @@ import {
   Check,
 } from 'lucide-react'
 import Badge from './Badge'
-import { SEVERITY } from '../../utils/helpers'
+import { SEVERITY, normalizeSeverity } from '../../utils/helpers'
 import {
   formatIndianNumber,
   generateDistrictSummary,
@@ -27,10 +27,10 @@ export default function DistrictDrawer({ district, open, onClose }) {
   const shareDistrict = async () => {
     if (!district) return
     const url = `${window.location.origin}/districts?district=${encodeURIComponent(district.id)}`
-    const sev = SEVERITY[district.severity] || SEVERITY.normal
-    const text = `${district.name} flood status: ${sev.label} — ${formatIndianNumber(
+    const sev = SEVERITY[normalizeSeverity(district.severity)] || SEVERITY.normal
+    const text = `${district.name}: ${sev.label} — ${formatIndianNumber(
       district.populationAffected
-    )} people affected, ${formatIndianNumber(
+    )} people affected (ASDMA), ${formatIndianNumber(
       district.reliefCamps
     )} relief camps. Via FloodAssist Assam.`
 
@@ -58,7 +58,9 @@ export default function DistrictDrawer({ district, open, onClose }) {
     }
   }, [open, onClose])
 
-  const sev = district ? SEVERITY[district.severity] || SEVERITY.normal : null
+  const sev = district
+    ? SEVERITY[normalizeSeverity(district.severity)] || SEVERITY.normal
+    : null
   const summary = district ? generateDistrictSummary(district) : ''
 
   const metrics = district

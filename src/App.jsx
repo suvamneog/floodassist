@@ -27,14 +27,14 @@ const PAGE_SEO = {
       'Independent Assam flood dashboard by Suvam Neog (not a government site). Latest ASDMA daily report: district status, flood map, relief camps, river alerts, helplines 1079 1070 108.',
   },
   '/flood-map': {
-    title: 'Assam Flood Map — District Severity | FloodAssist Assam',
+    title: 'Assam Flood Map — District Status | FloodAssist Assam',
     description:
-      'Interactive Assam flood map shaded by district severity from the latest ASDMA daily flood report. Search districts and view impact details.',
+      'Assam flood map shaded by ASDMA people-affected counts from the latest official daily flood report. Pins mark approximate district HQ — not camp GPS. Same-day figures, not realtime gauges.',
   },
   '/districts': {
     title: 'Assam District Flood Status | FloodAssist Assam',
     description:
-      'Flood severity across Assam districts with people affected, villages, and camps from the official ASDMA daily report.',
+      'ASDMA affected districts with people, villages, and camps from the official daily flood report.',
   },
   '/relief-camps': {
     title: 'Assam Relief Camps — ASDMA Camp Totals | FloodAssist',
