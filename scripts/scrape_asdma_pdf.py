@@ -435,11 +435,14 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
     result["reportDate"] = extract_report_date(full)
 
     # --- Rivers section ---
-    # In some PDFs the danger-level list appears BEFORE the label; grab both
-    # patterns by locating each label independently.
-    danger = re.search(
-        r"([^\n]{2,400})\s*Rivers flowing above danger level|"
+    # Prefer text AFTER the label. Some PDFs print a stray "Rivers" cell
+    # BEFORE the label; that must not win over the actual river list.
+    danger_after = re.search(
         r"Rivers flowing above danger level\s*([^\n]{2,400})",
+        full,
+    )
+    danger_before = re.search(
+        r"([^\n]{2,400})\s*Rivers flowing above danger level",
         full,
     )
     flood = re.search(
@@ -460,6 +463,8 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
             raw,
             flags=re.IGNORECASE,
         ).strip()
+        if raw.lower().startswith("nil") or not raw:
+            return []
         parts = [
             re.sub(r"\s+", " ", r).strip()
             for r in raw.split(",")
@@ -470,27 +475,29 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
             and re.search(r"[A-Za-z]{3,}", p)  # must contain a real word
         ]
 
-    if danger:
-        result["rivers"]["danger"] = clean_rivers(danger.group(1) or danger.group(2))
+    if danger_after:
+        result["rivers"]["danger"] = clean_rivers(danger_after.group(1))
+    elif danger_before:
+        result["rivers"]["danger"] = clean_rivers(danger_before.group(1))
     if flood:
         result["rivers"]["flood"] = clean_rivers(flood.group(1))
-    # Rivers can span multiple lines — also look for continuation lines with
-    # station patterns like `Xyz (Location)` immediately after the label.
-    danger_block = slice_section(
-        full,
-        r"Rivers flowing above danger level",
-        [r"Rivers flowing above highest flood level", r"District\s+No\. of"],
-    )
-    extra = re.findall(r"[A-Z][A-Za-z]+\s*\([^)]+\)", danger_block)
-    if extra and not result["rivers"]["danger"]:
-        result["rivers"]["danger"] = extra
-    elif extra:
-        # merge unique
-        seen = set(result["rivers"]["danger"])
-        for r in extra:
-            if r not in seen:
-                result["rivers"]["danger"].append(r)
-                seen.add(r)
+    # Multi-line fallback only when the one-line capture missed rivers.
+    if not result["rivers"]["danger"]:
+        danger_block = slice_section(
+            full,
+            r"Rivers flowing above danger level",
+            [r"Rivers flowing above highest flood level", r"District\s+No\. of"],
+        )
+        # One nesting level for stations like Katakhal (MATIZURI (FFS)).
+        extra = re.findall(
+            r"[A-Z][A-Za-z]+\s*\([^()\n]*(?:\([^()\n]*\)[^()\n]*)*\)",
+            danger_block,
+        )
+        result["rivers"]["danger"] = [
+            re.sub(r"\s+", " ", r).strip()
+            for r in extra
+            if r.lower() != "nil"
+        ]
 
     # --- Affected districts list ---
     # Formats:

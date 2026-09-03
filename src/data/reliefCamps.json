@@ -1,12 +1,28 @@
 [
   {
+    "id": "asdma-camp-cachar",
+    "name": "Cachar — district relief camps (total)",
+    "district": "Cachar",
+    "districtId": "cachar",
+    "campCount": 1,
+    "summary": "1 relief camp(s) reported open in Cachar district with 84 inmates (ASDMA 03 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 84,
+    "phone": "1077",
+    "coordinates": {
+      "lat": 24.8333,
+      "lng": 92.7789
+    },
+    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
     "id": "asdma-camp-nagaon",
     "name": "Nagaon — district relief camps (total)",
     "district": "Nagaon",
     "districtId": "nagaon",
-    "campCount": 3,
-    "summary": "3 relief camp(s) reported open in Nagaon district with 1,053 inmates (ASDMA 29 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 1053,
+    "campCount": 1,
+    "summary": "1 relief camp(s) reported open in Nagaon district with 306 inmates (ASDMA 03 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 306,
     "phone": "1077",
     "coordinates": {
       "lat": 26.3509,
@@ -21,8 +37,8 @@
     "district": "Sivasagar",
     "districtId": "sivasagar",
     "campCount": 2,
-    "summary": "2 relief camp(s) reported open in Sivasagar district with 50 inmates (ASDMA 29 Aug 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 50,
+    "summary": "2 relief camp(s) reported open in Sivasagar district with 53 inmates (ASDMA 03 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 53,
     "phone": "1077",
     "coordinates": {
       "lat": 26.9844,
