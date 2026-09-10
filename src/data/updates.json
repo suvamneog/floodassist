@@ -1,15 +1,15 @@
 [
   {
-    "id": "asdma-2026-09-07",
-    "title": "ASDMA Daily Flood Report — 07 Sep 2026",
-    "date": "2026-09-07T08:00:00Z",
+    "id": "asdma-2026-09-09",
+    "title": "ASDMA Daily Flood Report — 09 Sep 2026",
+    "date": "2026-09-09T08:00:00Z",
     "source": "ASDMA / SDRF",
-    "summary": "5 districts affected. 10,359 people affected across 99 villages. 2 relief camps with 127 inmates. Rivers above danger level: Dhansiri (S) (Numaligarh). Source: https://sdrf.assam.gov.in/dfr/"
+    "summary": "3 districts affected. 10,204 people affected across 65 villages. 3 relief camps with 223 inmates. Rivers above danger level: Dhansiri (S) (Numaligarh). Source: https://sdrf.assam.gov.in/dfr/"
   },
   {
-    "id": "cwc-danger-2026-09-07",
+    "id": "cwc-danger-2026-09-09",
     "title": "CWC: rivers flowing above danger level",
-    "date": "2026-09-07T08:00:00Z",
+    "date": "2026-09-09T08:00:00Z",
     "source": "CWC via ASDMA",
     "summary": "Dhansiri (S) (Numaligarh)"
   }
