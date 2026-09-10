@@ -1,16 +1,16 @@
 [
   {
-    "id": "asdma-camp-nagaon",
-    "name": "Nagaon — district relief camps (total)",
-    "district": "Nagaon",
-    "districtId": "nagaon",
-    "campCount": 1,
-    "summary": "1 relief camp(s) reported open in Nagaon district with 104 inmates (ASDMA 07 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
-    "campInmates": 104,
+    "id": "asdma-camp-karbi-anglong",
+    "name": "Karbi Anglong — district relief camps (total)",
+    "district": "Karbi Anglong",
+    "districtId": "karbi-anglong",
+    "campCount": 2,
+    "summary": "2 relief camp(s) reported open in Karbi Anglong district with 200 inmates (ASDMA 09 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "campInmates": 200,
     "phone": "1077",
     "coordinates": {
-      "lat": 26.3509,
-      "lng": 92.6925
+      "lat": 26.0,
+      "lng": 93.45
     },
     "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
     "source": "ASDMA Daily Flood Report"
@@ -21,7 +21,7 @@
     "district": "Sivasagar",
     "districtId": "sivasagar",
     "campCount": 1,
-    "summary": "1 relief camp(s) reported open in Sivasagar district with 23 inmates (ASDMA 07 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
+    "summary": "1 relief camp(s) reported open in Sivasagar district with 23 inmates (ASDMA 09 Sep 2026). Individual camp addresses are published by the District Administration — call District Control Room (1077).",
     "campInmates": 23,
     "phone": "1077",
     "coordinates": {
