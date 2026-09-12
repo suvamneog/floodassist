@@ -1117,6 +1117,19 @@ def update_sitemap_lastmod(report_date: dt.date) -> None:
         print(f"  ✓ Updated sitemap lastmod → {iso}")
 
 
+def update_index_date_modified(report_date: dt.date) -> None:
+    """Keep schema.org dateModified in index.html aligned with latest report."""
+    index = ROOT / "index.html"
+    if not index.exists():
+        return
+    iso = report_date.isoformat()
+    text = index.read_text(encoding="utf-8")
+    updated = re.sub(r'"dateModified":\s*"\d{4}-\d{2}-\d{2}"', f'"dateModified": "{iso}"', text)
+    if updated != text:
+        index.write_text(updated, encoding="utf-8")
+        print(f"  ✓ Updated index.html dateModified → {iso}")
+
+
 def build_history_entry(data: dict[str, Any], parsed: dict[str, Any], report_date: dt.date) -> dict[str, Any]:
     """Compact snapshot used for trends, comparison and timeline."""
     top = sorted(
@@ -1252,6 +1265,7 @@ def process_one_day(
         write_json(DATA_DIR / "updates.json", data["updates"])
         write_json(DATA_DIR / "meta.json", data["meta"])
         update_sitemap_lastmod(report_date)
+        update_index_date_modified(report_date)
         print(
             f"\n✓ Live dashboard updated from ASDMA report dated "
             f"{report_date.strftime('%d %b %Y')}."

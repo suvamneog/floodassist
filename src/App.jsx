@@ -5,6 +5,7 @@ import Layout from './components/layout/Layout'
 import ErrorBoundary from './components/ui/ErrorBoundary'
 import PageLoader from './components/ui/PageLoader'
 import Home from './pages/Home'
+import meta from './data/meta.json'
 
 const FloodMap = lazy(() => import('./pages/FloodMap'))
 const DistrictStatus = lazy(() => import('./pages/DistrictStatus'))
@@ -24,7 +25,7 @@ const PAGE_SEO = {
   '/': {
     title: 'FloodAssist Assam — Assam Flood Map, Relief Camps & Emergency Helplines',
     description:
-      'Independent Assam flood dashboard by Suvam Neog (not a government site). Latest ASDMA daily report: district status, flood map, relief camps, river alerts, helplines 1079 1070 108.',
+      'FloodAssist Assam by Suvam Neog shows the latest ASDMA daily flood report for Assam: district status, flood map, relief camps, river alerts, and helplines 1079 1070 108. Unofficial; same-day figures, not realtime.',
   },
   '/flood-map': {
     title: 'Assam Flood Map — District Status | FloodAssist Assam',
@@ -34,7 +35,7 @@ const PAGE_SEO = {
   '/districts': {
     title: 'Assam District Flood Status | FloodAssist Assam',
     description:
-      'ASDMA affected districts with people, villages, and camps from the official daily flood report.',
+      'ASDMA affected districts with people, villages, and camps from the official daily flood report — clear per-district totals for Assam.',
   },
   '/relief-camps': {
     title: 'Assam Relief Camps — ASDMA Camp Totals | FloodAssist',
@@ -44,12 +45,12 @@ const PAGE_SEO = {
   '/emergency': {
     title: 'Assam Flood Emergency Helplines (1079, 1070, 108) | FloodAssist',
     description:
-      'Flood-first Assam emergency contacts: ASDMA 1079, SEOC 1070, ambulance 108, police 100, fire 101, and District Control Room 1077.',
+      'Assam flood helplines: ASDMA 1079, SEOC 1070, ambulance 108, police 100, fire 101, District Control Room 1077. Published numbers on FloodAssist Assam — not a live call-centre feed.',
   },
   '/checklist': {
     title: 'Flood Emergency Checklist | FloodAssist Assam',
     description:
-      'Interactive Assam flood preparedness checklist — pack essentials, documents, and safety steps before and during floods.',
+      'Assam flood preparedness checklist aligned with ASDMA safety guidance — pack essentials, documents, and safety steps before and during floods.',
   },
   '/updates': {
     title: 'Assam Flood Updates — ASDMA Advisories | FloodAssist',
@@ -123,6 +124,12 @@ function ScrollToTop() {
       'href',
       `${SITE}${pathname === '/' ? '/' : pathname}`
     )
+
+    const modified = meta.reportDate || meta.period
+    if (modified) {
+      setMeta('article:modified_time', `${modified}T08:00:00+05:30`, 'property')
+      setMeta('og:updated_time', `${modified}T08:00:00+05:30`, 'property')
+    }
   }, [pathname])
   return null
 }

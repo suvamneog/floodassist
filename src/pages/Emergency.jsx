@@ -13,6 +13,8 @@ import { CardSkeleton } from '../components/ui/Skeleton'
 import { useFetch } from '../hooks/useFetch'
 import { getContacts } from '../services/contactService'
 import { telLink } from '../utils/helpers'
+import FaqSection from '../components/seo/FaqSection'
+import { EMERGENCY_FAQS } from '../data/seoFaqs'
 
 const ICONS = {
   Shield,
@@ -37,8 +39,8 @@ export default function Emergency() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
-        title="Emergency Contacts"
-        subtitle="Published Assam / national emergency numbers. Same published lines — not a live call-centre feed. Tap any card to call."
+        title="Assam flood emergency helplines"
+        subtitle="Published Assam / national emergency numbers. ASDMA 1079, SEOC 1070, ambulance 108, police 100, fire 101, District Control Room 1077. Same published lines — not a live call-centre feed. Tap any card to call."
       />
 
       {loading || !contacts ? (
@@ -96,6 +98,14 @@ export default function Emergency() {
           })}
         </div>
       )}
+
+      <div className="mt-14">
+        <FaqSection
+          title="Helpline FAQ"
+          faqs={EMERGENCY_FAQS}
+          schemaId="https://floodassist-assam.vercel.app/emergency#faq"
+        />
+      </div>
     </div>
   )
 }

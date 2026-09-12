@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { Heart, Map, Phone, Shield } from 'lucide-react'
 import PageHeader from '../components/ui/PageHeader'
 import Card from '../components/ui/Card'
+import FaqSection from '../components/seo/FaqSection'
+import { ABOUT_FAQS } from '../data/seoFaqs'
 
 const pillars = [
   {
@@ -151,6 +153,14 @@ export default function About() {
             </motion.div>
           )
         })}
+      </div>
+
+      <div className="mt-14">
+        <FaqSection
+          title="Creator & citation FAQ"
+          faqs={ABOUT_FAQS}
+          schemaId="https://floodassist-assam.vercel.app/about#faq"
+        />
       </div>
     </div>
   )
