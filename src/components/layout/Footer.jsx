@@ -47,7 +47,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/about" className="hover:text-primary-600">
-                  About
+                  About · Suvam Neog
                 </Link>
               </li>
             </ul>

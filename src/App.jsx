@@ -77,9 +77,9 @@ const PAGE_SEO = {
       'Outbound Assam flood relief donation links only. FloodAssist does not collect money or verify how funds are spent.',
   },
   '/about': {
-    title: 'About FloodAssist Assam — Built by Suvam Neog',
+    title: 'Who is Suvam Neog? About FloodAssist Assam',
     description:
-      'FloodAssist Assam is an independent unofficial project by Suvam Neog. Not affiliated with ASDMA or the Government of Assam. Figures come from the public ASDMA daily flood report.',
+      'Suvam Neog is the creator of FloodAssist Assam — an independent unofficial Assam flood dashboard using public ASDMA daily report figures. Not affiliated with ASDMA or the Government of Assam.',
   },
 }
 

@@ -1,0 +1,19 @@
+/* TEAM */
+Creator: Suvam Neog
+Role: Creator, author, and developer of FloodAssist Assam
+Site: https://floodassist-assam.vercel.app/
+GitHub: https://github.com/suvamneog
+Project repo: https://github.com/suvamneog/floodassist
+Location: Assam, India
+
+/* SITE */
+Name: FloodAssist Assam
+Standards: HTML5, React, Vite
+Purpose: Independent unofficial Assam flood dashboard using public ASDMA / SDRF Daily Flood Report figures
+Not: A government website; not affiliated with ASDMA or the Government of Assam
+Data: https://sdrf.assam.gov.in/dfr/
+Last update: See https://floodassist-assam.vercel.app/ and sitemap lastmod
+
+/* THANKS */
+Official flood figures: ASDMA / SDRF Daily Flood Report (public)
+Map tiles: OpenStreetMap contributors
