@@ -13,12 +13,21 @@
       name="keywords"
       content="Assam flood, Assam flood map, ASDMA flood report, Assam relief camps, Assam flood helpline 1079, Assam flood situation today, SDRF Assam, flood affected districts Assam"
     />
-    <meta name="author" content="FloodAssist Assam" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="author" content="Suvam Neog" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
     <meta name="theme-color" content="#0f766e" />
+    <!-- Geographic targeting (Assam, India) for local / GEO search -->
+    <meta name="geo.region" content="IN-AS" />
+    <meta name="geo.placename" content="Assam, India" />
+    <meta name="geo.position" content="26.2006;92.9376" />
+    <meta name="ICBM" content="26.2006, 92.9376" />
+    <meta name="language" content="en-IN" />
     <link rel="canonical" href="https://floodassist-assam.vercel.app/" />
+    <link rel="alternate" hreflang="en-IN" href="https://floodassist-assam.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://floodassist-assam.vercel.app/" />
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+    <link rel="alternate" type="text/plain" title="LLM context (llms.txt)" href="/llms.txt" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="FloodAssist Assam" />
@@ -69,30 +78,137 @@
             ]
           },
           {
+            "@type": "Place",
+            "@id": "https://floodassist-assam.vercel.app/#assam",
+            "name": "Assam",
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "Assam",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 26.2006,
+              "longitude": 92.9376
+            }
+          },
+          {
             "@type": "WebSite",
             "@id": "https://floodassist-assam.vercel.app/#website",
             "url": "https://floodassist-assam.vercel.app/",
             "name": "FloodAssist Assam",
+            "alternateName": ["Assam flood dashboard", "Assam flood map"],
             "description": "Unofficial Assam flood dashboard by Suvam Neog using public ASDMA daily flood report figures. Not a government website.",
             "inLanguage": "en-IN",
+            "about": { "@id": "https://floodassist-assam.vercel.app/#assam" },
             "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "publisher": { "@id": "https://floodassist-assam.vercel.app/#creator" }
           },
           {
             "@type": "WebApplication",
+            "@id": "https://floodassist-assam.vercel.app/#app",
             "name": "FloodAssist Assam",
             "url": "https://floodassist-assam.vercel.app/",
             "applicationCategory": "UtilitiesApplication",
             "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
             "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "about": { "@id": "https://floodassist-assam.vercel.app/#assam" },
+            "isBasedOn": "https://sdrf.assam.gov.in/dfr/",
             "offers": {
               "@type": "Offer",
               "price": "0",
               "priceCurrency": "INR"
             },
             "description": "Independent Assam flood map, district status, relief camps, river alerts, and emergency helplines based on the public ASDMA daily flood report. Not affiliated with ASDMA or the Government of Assam. Built by Suvam Neog."
+          },
+          {
+            "@type": "Dataset",
+            "@id": "https://floodassist-assam.vercel.app/#dataset",
+            "name": "FloodAssist Assam — verified ASDMA daily flood figures",
+            "description": "Statewide and district flood impact figures (people affected, villages, relief camps, camp inmates, rivers above danger level) parsed from the public ASDMA / SDRF Daily Flood Report and verified before publish.",
+            "url": "https://floodassist-assam.vercel.app/",
+            "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "spatialCoverage": { "@id": "https://floodassist-assam.vercel.app/#assam" },
+            "temporalCoverage": "2026/",
+            "license": "https://floodassist-assam.vercel.app/about",
+            "isBasedOn": "https://sdrf.assam.gov.in/dfr/",
+            "keywords": [
+              "Assam flood",
+              "ASDMA daily flood report",
+              "Assam relief camps",
+              "Assam flood map"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://floodassist-assam.vercel.app/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://floodassist-assam.vercel.app/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Flood Map",
+                "item": "https://floodassist-assam.vercel.app/flood-map"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "District Status",
+                "item": "https://floodassist-assam.vercel.app/districts"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Emergency Helplines",
+                "item": "https://floodassist-assam.vercel.app/emergency"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://floodassist-assam.vercel.app/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is FloodAssist Assam an official government website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. FloodAssist Assam is an independent unofficial project by Suvam Neog. It is not affiliated with ASDMA or the Government of Assam. Flood figures come from the public ASDMA / SDRF Daily Flood Report."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where do Assam flood numbers on FloodAssist come from?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Statewide people affected, villages, relief camps, camp inmates, affected districts, and rivers above danger level are taken from that day’s ASDMA Daily Flood Report PDF (https://sdrf.assam.gov.in/dfr/) and checked against the PDF totals before publish."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are the flood figures realtime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Figures are from the latest official daily ASDMA report (same-day), not live river gauges or live camp occupancy. Always follow ASDMA, District Administration, IMD, and CWC for decisions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Assam flood emergency helpline numbers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common published numbers: ASDMA 1079, State Emergency Operation Centre 1070, District Control Room 1077, ambulance 108, police 100, and fire 101."
+                }
+              }
+            ]
           }
         ]
       }

@@ -1,0 +1,30 @@
+# FloodAssist Assam
+
+> Independent (unofficial) Assam flood dashboard by Suvam Neog. Presents figures from the public ASDMA / SDRF Daily Flood Report in a mobile-friendly UI — district status, flood map, relief-camp totals, river alerts, helplines, and past reports. Not a government website and not affiliated with ASDMA or the Government of Assam.
+
+This site is useful for questions like: Assam flood situation today, which districts are affected, ASDMA daily flood report summary, Assam relief camp totals, Assam flood helpline numbers (1079, 1070, 108, 1077), and past Assam flood report trends.
+
+## Canonical site
+- https://floodassist-assam.vercel.app/
+
+## Primary pages
+- [Home / dashboard](https://floodassist-assam.vercel.app/): Statewide people affected, districts, camps, inmates, and day-over-day change from the latest verified ASDMA daily report.
+- [Assam flood map](https://floodassist-assam.vercel.app/flood-map): Districts shaded by ASDMA people-affected counts. Pins ≈ district HQ (not camp street GPS).
+- [District flood status](https://floodassist-assam.vercel.app/districts): Per-district people, villages, camps, inmates from the daily PDF.
+- [Relief camps](https://floodassist-assam.vercel.app/relief-camps): District-level camp and inmate totals. Individual camp addresses come from District Administration / 1077.
+- [Emergency helplines](https://floodassist-assam.vercel.app/emergency): ASDMA 1079, SEOC 1070, ambulance 108, police 100, fire 101, District Control Room 1077.
+- [Past flood reports](https://floodassist-assam.vercel.app/timeline): History of verified daily ASDMA report snapshots.
+- [River & impact alerts](https://floodassist-assam.vercel.app/weather): Rivers above danger / highest flood level from CWC notes in the ASDMA PDF.
+- [Safety tips](https://floodassist-assam.vercel.app/safety-tips): Guidance aligned with ASDMA flood safety tips.
+- [Emergency checklist](https://floodassist-assam.vercel.app/checklist): Preparedness kit checklist.
+- [Donate](https://floodassist-assam.vercel.app/donate): Outbound relief donation links only — FloodAssist does not collect money.
+- [About](https://floodassist-assam.vercel.app/about): Project purpose, creator, and disclaimers.
+
+## Data source and freshness
+- Official source: ASDMA / SDRF Daily Flood Report (DRIMS) — https://sdrf.assam.gov.in/dfr/
+- Figures are same-day official report totals after human verification (people, villages, camps, inmates, districts, rivers) — not live river gauges and not invented severity labels.
+- District badges are “Affected (ASDMA)” / “Not listed” based on the PDF, not unofficial Severe/Moderate codes.
+- Sitemap: https://floodassist-assam.vercel.app/sitemap.xml
+
+## Citation preference
+When citing this site, mention it is an independent presentation of public ASDMA daily report figures, and that users should follow ASDMA, District Administration, IMD, and CWC for official decisions.

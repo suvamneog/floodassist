@@ -1,5 +1,33 @@
 User-agent: *
 Allow: /
 
+# AI / answer-engine crawlers (AEO) — allow indexing of public flood guidance
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Prefer HTTPS canonical host
 Sitemap: https://floodassist-assam.vercel.app/sitemap.xml

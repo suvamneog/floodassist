@@ -55,7 +55,9 @@ UA = (
     "contacts local-dev; respects robots)"
 )
 
+# Prefer the download form; fall back to /dfr/ if that path is erroring (e.g. portal 500).
 DFR_URL = "https://sdrf.assam.gov.in/dfr/download?type=flood"
+DFR_URL_FALLBACK = "https://sdrf.assam.gov.in/dfr/"
 DFR_POST = "https://sdrf.assam.gov.in/dfr/download"
 
 
@@ -157,14 +159,38 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
     session.headers.update({"User-Agent": UA})
 
     print(f"→ Fetching DFR form (CSRF, session cookie)…", flush=True)
+    form_url = DFR_URL
     page = request_with_retries(
-        lambda: session.get(DFR_URL, timeout=60),
+        lambda: session.get(form_url, timeout=60),
         label="DFR form GET",
     )
-    page.raise_for_status()
-    token_match = re.search(r'name="_token" value="([^"]+)"', page.text)
+    token_match = re.search(r'name="_token"\s+value="([^"]+)"', page.text) or re.search(
+        r'name="_token" value="([^"]+)"', page.text
+    )
+    if (page.status_code >= 400 or not token_match) and form_url != DFR_URL_FALLBACK:
+        print(
+            f"  ⚠ form GET {page.status_code} (no usable token); trying {DFR_URL_FALLBACK}",
+            flush=True,
+        )
+        form_url = DFR_URL_FALLBACK
+        page = request_with_retries(
+            lambda: session.get(form_url, timeout=60),
+            label="DFR form GET fallback",
+        )
+        token_match = re.search(r'name="_token"\s+value="([^"]+)"', page.text) or re.search(
+            r'name="_token" value="([^"]+)"', page.text
+        )
     if not token_match:
-        raise RuntimeError("Could not extract CSRF _token from DFR page")
+        hint = ""
+        if "No space left on device" in page.text or "Writing to the log file failed" in page.text:
+            hint = (
+                " ASDMA/SDRF portal appears down (server disk full). "
+                "Try again later — do not invent figures."
+            )
+        raise RuntimeError(
+            f"Could not extract CSRF _token from DFR page "
+            f"(HTTP {page.status_code}).{hint}"
+        )
     token = token_match.group(1)
 
     tried: list[str] = []
@@ -173,10 +199,10 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
         date_str = candidate.isoformat()
         print(f"→ Trying date {date_str} …", end=" ", flush=True)
         resp = request_with_retries(
-            lambda ds=date_str, tok=token: session.post(
+            lambda ds=date_str, tok=token, ref=form_url: session.post(
                 DFR_POST,
                 data={"_token": tok, "type": "flood", "date": ds},
-                headers={"Referer": DFR_URL},
+                headers={"Referer": ref},
                 timeout=90,
                 allow_redirects=True,
             ),
@@ -217,10 +243,12 @@ def fetch_pdf(target_date: dt.date, lookback: int) -> tuple[bytes, dt.date, str]
         # 419 usually means session expired — refresh token
         if resp.status_code == 419:
             page = request_with_retries(
-                lambda: session.get(DFR_URL, timeout=60),
+                lambda ref=form_url: session.get(ref, timeout=60),
                 label="DFR form refresh",
             )
-            token_match = re.search(r'name="_token" value="([^"]+)"', page.text)
+            token_match = re.search(r'name="_token"\s+value="([^"]+)"', page.text) or re.search(
+                r'name="_token" value="([^"]+)"', page.text
+            )
             if token_match:
                 token = token_match.group(1)
 
