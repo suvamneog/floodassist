@@ -18,6 +18,8 @@ import { CardSkeleton } from '../components/ui/Skeleton'
 import { useFetch } from '../hooks/useFetch'
 import { getHistory, getDashboardForDate, getPreviousReport } from '../services/historyService'
 import { formatReportDate } from '../utils/intelligence'
+import FaqSection from '../components/seo/FaqSection'
+import { HOME_FAQS } from '../data/seoFaqs'
 
 const TrendCharts = lazy(() => import('../components/intelligence/TrendCharts'))
 
@@ -124,13 +126,20 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border dark:border-border-dark">
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-20">
           <div>
+            <motion.p
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-3 text-sm font-semibold uppercase tracking-wider text-primary-700 dark:text-primary-400"
+            >
+              FloodAssist Assam · by Suvam Neog
+            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.05 }}
               className="text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.25rem] dark:text-white"
             >
-              Helping Assam Stay Safe During Floods
+              Assam flood status from the official ASDMA daily report
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 12 }}
@@ -138,8 +147,10 @@ export default function Home() {
               transition={{ delay: 0.1 }}
               className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
             >
-              Check flood situations, relief camps, emergency contacts and
-              official updates in one place.
+              FloodAssist Assam shows the latest public ASDMA / SDRF Daily Flood
+              Report figures — districts, people affected, relief camps, river
+              alerts, and helplines — in one place. Independent site by Suvam
+              Neog; same-day official report figures, not realtime gauges.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 12 }}
@@ -233,6 +244,18 @@ export default function Home() {
               )}
             </>
           )}
+        </div>
+      </section>
+
+      <section className="border-t border-border bg-surface-muted py-14 dark:border-border-dark dark:bg-slate-950/40">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <FaqSection
+            title="Assam flood FAQ"
+            subtitle="Direct answers for search and AI assistants — based on how FloodAssist Assam works."
+            faqs={HOME_FAQS}
+            schemaId="https://floodassist-assam.vercel.app/#faq"
+            injectSchema={false}
+          />
         </div>
       </section>
 

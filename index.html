@@ -107,6 +107,22 @@
             }
           },
           {
+            "@type": "Organization",
+            "@id": "https://floodassist-assam.vercel.app/#organization",
+            "name": "FloodAssist Assam",
+            "alternateName": ["Assam flood dashboard", "FloodAssist"],
+            "url": "https://floodassist-assam.vercel.app/",
+            "logo": "https://floodassist-assam.vercel.app/og-image.jpg",
+            "description": "Independent unofficial Assam flood information dashboard by Suvam Neog, presenting public ASDMA / SDRF Daily Flood Report figures.",
+            "foundingDate": "2026",
+            "founder": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "areaServed": { "@id": "https://floodassist-assam.vercel.app/#assam" },
+            "sameAs": [
+              "https://github.com/suvamneog/floodassist",
+              "https://floodassist-assam.vercel.app/about"
+            ]
+          },
+          {
             "@type": "WebSite",
             "@id": "https://floodassist-assam.vercel.app/#website",
             "url": "https://floodassist-assam.vercel.app/",
@@ -117,7 +133,8 @@
             "about": { "@id": "https://floodassist-assam.vercel.app/#assam" },
             "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
-            "publisher": { "@id": "https://floodassist-assam.vercel.app/#creator" }
+            "publisher": { "@id": "https://floodassist-assam.vercel.app/#organization" },
+            "dateModified": "2026-09-09"
           },
           {
             "@type": "WebApplication",
@@ -129,8 +146,10 @@
             "browserRequirements": "Requires JavaScript",
             "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
             "author": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "publisher": { "@id": "https://floodassist-assam.vercel.app/#organization" },
             "about": { "@id": "https://floodassist-assam.vercel.app/#assam" },
             "isBasedOn": "https://sdrf.assam.gov.in/dfr/",
+            "dateModified": "2026-09-09",
             "offers": {
               "@type": "Offer",
               "price": "0",
@@ -145,15 +164,19 @@
             "description": "Statewide and district flood impact figures (people affected, villages, relief camps, camp inmates, rivers above danger level) parsed from the public ASDMA / SDRF Daily Flood Report and verified before publish.",
             "url": "https://floodassist-assam.vercel.app/",
             "creator": { "@id": "https://floodassist-assam.vercel.app/#creator" },
+            "publisher": { "@id": "https://floodassist-assam.vercel.app/#organization" },
             "spatialCoverage": { "@id": "https://floodassist-assam.vercel.app/#assam" },
             "temporalCoverage": "2026/",
+            "dateModified": "2026-09-09",
             "license": "https://floodassist-assam.vercel.app/about",
             "isBasedOn": "https://sdrf.assam.gov.in/dfr/",
             "keywords": [
               "Assam flood",
               "ASDMA daily flood report",
               "Assam relief camps",
-              "Assam flood map"
+              "Assam flood map",
+              "Suvam Neog",
+              "FloodAssist Assam"
             ]
           },
           {
@@ -192,34 +215,18 @@
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Who is Suvam Neog?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Suvam Neog is the independent creator, author, and developer of FloodAssist Assam (https://floodassist-assam.vercel.app/). He built the unofficial Assam flood dashboard that presents public ASDMA / SDRF Daily Flood Report figures. Source code: https://github.com/suvamneog/floodassist. GitHub: https://github.com/suvamneog. He is not an ASDMA or Government of Assam official."
-                }
-              },
-              {
-                "@type": "Question",
                 "name": "What is FloodAssist Assam?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "FloodAssist Assam is an independent, unofficial flood information website for Assam, created by Suvam Neog. It shows district flood status, a flood map, relief-camp totals, river alerts, emergency helplines, past ASDMA reports, safety tips, and a checklist — based on the public ASDMA / SDRF Daily Flood Report. Live site: https://floodassist-assam.vercel.app/. It is not a government website."
+                  "text": "FloodAssist Assam is an independent, unofficial flood information website for Assam, created by Suvam Neog. It presents public ASDMA / SDRF Daily Flood Report figures — district status, flood map, relief camps, river alerts, and helplines — in a clear mobile UI. It is not a government website and is not affiliated with ASDMA or the Government of Assam."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Who built FloodAssist Assam?",
+                "name": "Who is Suvam Neog?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "FloodAssist Assam was built by Suvam Neog. It is an independent unofficial project and is not affiliated with ASDMA, SDRF, or the Government of Assam."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Is FloodAssist Assam an official government website?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "No. FloodAssist Assam is an independent unofficial project by Suvam Neog. It is not affiliated with ASDMA or the Government of Assam. Flood figures come from the public ASDMA / SDRF Daily Flood Report."
+                  "text": "Suvam Neog is the independent creator, author, and developer of FloodAssist Assam (https://floodassist-assam.vercel.app/). Source code is at https://github.com/suvamneog/floodassist. He is not an ASDMA or Government of Assam official."
                 }
               },
               {
@@ -227,15 +234,23 @@
                 "name": "Where do Assam flood numbers on FloodAssist come from?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Statewide people affected, villages, relief camps, camp inmates, affected districts, and rivers above danger level are taken from that day’s ASDMA Daily Flood Report PDF (https://sdrf.assam.gov.in/dfr/) and checked against the PDF totals before publish."
+                  "text": "Statewide people affected, villages, relief camps, camp inmates, affected districts, and rivers above danger level are taken from that day’s ASDMA / SDRF Daily Flood Report PDF (https://sdrf.assam.gov.in/dfr/) and checked against the PDF totals before publish."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Are the flood figures realtime?",
+                "name": "Are FloodAssist Assam flood figures realtime?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. Figures are from the latest official daily ASDMA report (same-day), not live river gauges or live camp occupancy. Always follow ASDMA, District Administration, IMD, and CWC for decisions."
+                  "text": "No. Figures are from the latest official daily ASDMA report (same-day when available), not live river gauges or live camp occupancy. Always follow ASDMA, District Administration, IMD, and CWC for decisions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is FloodAssist Assam an official government website?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. FloodAssist Assam is an independent unofficial project by Suvam Neog. It is not affiliated with ASDMA, SDRF, or the Government of Assam. Flood figures come from the public ASDMA / SDRF Daily Flood Report."
                 }
               },
               {
@@ -243,7 +258,7 @@
                 "name": "What are the Assam flood emergency helpline numbers?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Common published numbers: ASDMA 1079, State Emergency Operation Centre 1070, District Control Room 1077, ambulance 108, police 100, and fire 101."
+                  "text": "Common published numbers used on FloodAssist Assam: ASDMA 1079, State Emergency Operation Centre (SEOC) 1070, District Control Room 1077, ambulance 108, police 100, and fire 101. Confirm locally with District Administration when networks allow."
                 }
               }
             ]
@@ -265,9 +280,47 @@
       <main>
         <h1>FloodAssist Assam</h1>
         <p>
-          Unofficial Assam flood dashboard by Suvam Neog, using public ASDMA daily
-          report figures. Not a government website. Enable JavaScript for the full
-          interactive map and district tools.
+          FloodAssist Assam shows the latest public ASDMA / SDRF Daily Flood
+          Report figures — districts, people affected, relief camps, river
+          alerts, and helplines — in one place. Independent site by Suvam Neog;
+          same-day official report figures, not realtime gauges. Not a
+          government website. Enable JavaScript for the full interactive map.
+        </p>
+        <h2>Assam flood FAQ</h2>
+        <h3>What is FloodAssist Assam?</h3>
+        <p>
+          FloodAssist Assam is an independent, unofficial flood information
+          website for Assam, created by Suvam Neog. It presents public ASDMA /
+          SDRF Daily Flood Report figures — district status, flood map, relief
+          camps, river alerts, and helplines — in a clear mobile UI. It is not a
+          government website and is not affiliated with ASDMA or the Government
+          of Assam.
+        </p>
+        <h3>Who is Suvam Neog?</h3>
+        <p>
+          Suvam Neog is the independent creator, author, and developer of
+          FloodAssist Assam (https://floodassist-assam.vercel.app/). Source code
+          is at https://github.com/suvamneog/floodassist. He is not an ASDMA or
+          Government of Assam official.
+        </p>
+        <h3>Where do Assam flood numbers on FloodAssist come from?</h3>
+        <p>
+          Statewide people affected, villages, relief camps, camp inmates,
+          affected districts, and rivers above danger level are taken from that
+          day’s ASDMA / SDRF Daily Flood Report PDF
+          (https://sdrf.assam.gov.in/dfr/) and checked against the PDF totals
+          before publish.
+        </p>
+        <h3>Are FloodAssist Assam flood figures realtime?</h3>
+        <p>
+          No. Figures are from the latest official daily ASDMA report (same-day
+          when available), not live river gauges or live camp occupancy. Always
+          follow ASDMA, District Administration, IMD, and CWC for decisions.
+        </p>
+        <h3>What are the Assam flood emergency helpline numbers?</h3>
+        <p>
+          ASDMA 1079, SEOC 1070, District Control Room 1077, ambulance 108,
+          police 100, and fire 101.
         </p>
         <ul>
           <li><a href="/">Home</a></li>
@@ -279,6 +332,7 @@
           <li><a href="/weather">River &amp; Impact Alerts</a></li>
           <li><a href="/donate">Donate (outbound links)</a></li>
           <li><a href="/about">About FloodAssist Assam &amp; Suvam Neog</a></li>
+          <li><a href="/llms.txt">LLM context (llms.txt)</a></li>
         </ul>
       </main>
     </noscript>

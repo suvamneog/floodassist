@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import PageHeader from '../components/ui/PageHeader'
 import ProgressBar from '../components/ui/ProgressBar'
@@ -17,6 +18,35 @@ export default function Checklist() {
 
   const done = items ? items.filter((i) => checked[i.id]).length : 0
   const total = items?.length || 0
+
+  useEffect(() => {
+    if (!items?.length) return undefined
+    const scriptId = 'howto-jsonld-checklist'
+    let el = document.getElementById(scriptId)
+    if (!el) {
+      el = document.createElement('script')
+      el.type = 'application/ld+json'
+      el.id = scriptId
+      document.head.appendChild(el)
+    }
+    el.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Assam flood emergency preparedness checklist',
+      description:
+        'Preparedness kit items aligned with ASDMA flood safety guidance, shown on FloodAssist Assam.',
+      totalTime: 'PT30M',
+      step: items.slice(0, 12).map((item, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: item.label,
+        text: item.description || item.label,
+      })),
+    })
+    return () => {
+      el?.remove()
+    }
+  }, [items])
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
