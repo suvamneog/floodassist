@@ -31,3 +31,9 @@ Allow: /
 
 # Prefer HTTPS canonical host
 Sitemap: https://floodassist-assam.vercel.app/sitemap.xml
+
+# Identity for crawlers / LLMs
+# Creator: Suvam Neog — FloodAssist Assam
+# https://floodassist-assam.vercel.app/llms.txt
+# https://floodassist-assam.vercel.app/humans.txt
+# https://floodassist-assam.vercel.app/about
