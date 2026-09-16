@@ -14,8 +14,8 @@ export default function Updates() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
       <PageHeader
-        title="Official Updates"
-        subtitle="Latest advisories from ASDMA, IMD, SDRF and district administrations."
+        title="ASDMA Report Notes"
+        subtitle="Short notes derived from the latest ASDMA / SDRF Daily Flood Report — not a live IMD or district advisory feed."
       />
 
       {meta && (

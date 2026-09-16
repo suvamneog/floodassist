@@ -4,7 +4,6 @@ import stats from '../data/stats.json'
 import weather from '../data/weather.json'
 import meta from '../data/meta.json'
 import floodReports from '../data/floodReports.json'
-import reliefCamps from '../data/reliefCamps.json'
 import { formatReportDate } from '../utils/intelligence'
 
 export const getHistory = async () => ({
@@ -101,15 +100,18 @@ export const getDashboardForDate = async (date) => {
   const liveDate = getLiveReportDate()
 
   if (!date || date === liveDate) {
+    const districtRows = [...districts]
     return {
       isLive: true,
       date: liveDate,
-      districts: [...districts],
+      districts: districtRows,
       stats: { ...stats },
       weather: [...weather],
       meta: { ...meta },
       floodReports: [...floodReports],
-      reliefCamps: [...reliefCamps],
+      // Prefer camps derived from today's districts so a stale reliefCamps.json
+      // (left behind when a prior day had camps) cannot contradict stats.
+      reliefCamps: campsFromDistricts(districtRows, liveDate),
     }
   }
 
