@@ -228,7 +228,7 @@ export default function Home() {
                   <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
                     <div>
                       <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                        Live Snapshot
+                        Report Snapshot
                       </h2>
                       <p className="mt-1 text-slate-600 dark:text-slate-400">
                         Key figures from the selected ASDMA report
@@ -270,12 +270,12 @@ export default function Home() {
               {
                 to: '/districts',
                 title: 'District Status',
-                desc: 'Severity levels and affected villages for every district.',
+                desc: 'ASDMA affected / not-listed status and villages for every district.',
               },
               {
                 to: '/relief-camps',
                 title: 'Relief Camps',
-                desc: 'Find open camps near you with capacity and phone numbers.',
+                desc: 'District-level camp and inmate totals from the ASDMA daily report.',
               },
               {
                 to: '/donate',
@@ -289,8 +289,8 @@ export default function Home() {
               },
               {
                 to: '/updates',
-                title: 'Official Updates',
-                desc: 'Latest advisories from ASDMA, IMD and district offices.',
+                title: 'ASDMA Report Notes',
+                desc: 'Short notes derived from the latest ASDMA daily flood report.',
               },
               {
                 to: '/weather',

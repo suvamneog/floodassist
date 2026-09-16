@@ -1258,7 +1258,8 @@ def process_one_day(
     if not archive_only:
         write_json(DATA_DIR / "districts.json", data["districts"])
         write_json(DATA_DIR / "floodReports.json", data["floodReports"])
-        if data["reliefCamps"] and not keep_existing_camps:
+        # Always overwrite camps — empty [] when the PDF reports 0 camps (avoids stale prior-day camps).
+        if not keep_existing_camps:
             write_json(DATA_DIR / "reliefCamps.json", data["reliefCamps"])
         write_json(DATA_DIR / "stats.json", data["stats"])
         write_json(DATA_DIR / "weather.json", data["weather"])

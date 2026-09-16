@@ -53,9 +53,9 @@ const PAGE_SEO = {
       'Assam flood preparedness checklist aligned with ASDMA safety guidance — pack essentials, documents, and safety steps before and during floods.',
   },
   '/updates': {
-    title: 'Assam Flood Updates — ASDMA Advisories | FloodAssist',
+    title: 'ASDMA Flood Report Notes | FloodAssist Assam',
     description:
-      'Short Assam flood advisories derived from the latest ASDMA daily flood report and CWC river notes.',
+      'Short Assam flood notes derived from the latest ASDMA daily flood report. Not a live IMD or district advisory feed.',
   },
   '/timeline': {
     title: 'Past Assam Flood Reports | FloodAssist Assam',
