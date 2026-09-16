@@ -1,76 +1,19 @@
 [
   {
-    "id": "kamrup",
-    "name": "Kamrup",
-    "severity": "normal",
-    "affectedVillages": 0,
+    "id": "nagaon",
+    "name": "Nagaon",
+    "severity": "affected",
+    "affectedVillages": 52,
     "river": null,
     "populationAffected": 0,
     "reliefCamps": 0,
     "campInmates": 0,
-    "cropAreaHa": 0.0,
+    "cropAreaHa": 3599.0,
     "humanLivesLost": 0,
-    "lastUpdated": "2026-09-09T08:00:00Z",
-    "coordinates": {
-      "lat": 26.3161,
-      "lng": 91.5986
-    },
-    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
-    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
-  },
-  {
-    "id": "karbi-anglong",
-    "name": "Karbi Anglong",
-    "severity": "affected",
-    "affectedVillages": 2,
-    "river": null,
-    "populationAffected": 2213,
-    "reliefCamps": 2,
-    "campInmates": 200,
-    "cropAreaHa": 0.0,
-    "humanLivesLost": 0,
-    "lastUpdated": "2026-09-09T08:00:00Z",
-    "coordinates": {
-      "lat": 26.0,
-      "lng": 93.45
-    },
-    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
-    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
-  },
-  {
-    "id": "nagaon",
-    "name": "Nagaon",
-    "severity": "affected",
-    "affectedVillages": 59,
-    "river": null,
-    "populationAffected": 7768,
-    "reliefCamps": 0,
-    "campInmates": 0,
-    "cropAreaHa": 4093.61,
-    "humanLivesLost": 0,
-    "lastUpdated": "2026-09-09T08:00:00Z",
+    "lastUpdated": "2026-09-15T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
-    },
-    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
-    "source": "ASDMA Daily Flood Report (SDRF/DFR)"
-  },
-  {
-    "id": "sivasagar",
-    "name": "Sivasagar",
-    "severity": "affected",
-    "affectedVillages": 4,
-    "river": null,
-    "populationAffected": 223,
-    "reliefCamps": 1,
-    "campInmates": 23,
-    "cropAreaHa": 2.0,
-    "humanLivesLost": 0,
-    "lastUpdated": "2026-09-09T08:00:00Z",
-    "coordinates": {
-      "lat": 26.9844,
-      "lng": 94.6378
     },
     "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
     "source": "ASDMA Daily Flood Report (SDRF/DFR)"
