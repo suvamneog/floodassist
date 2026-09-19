@@ -1,6 +1,286 @@
 {
   "reports": [
     {
+      "date": "2026-09-18",
+      "scrapedAt": "2026-09-19T14:18:55Z",
+      "stats": {
+        "peopleAffected": 1171,
+        "floodedDistricts": 2,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "chirang",
+          "name": "Chirang",
+          "populationAffected": 1171,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 9,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "biswanath",
+          "name": "Biswanath",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 0,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 13,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "biswanath",
+          "name": "Biswanath",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-18T08:00:00Z",
+          "coordinates": {
+            "lat": 26.7333,
+            "lng": 93.15
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "chirang",
+          "name": "Chirang",
+          "severity": "affected",
+          "affectedVillages": 9,
+          "river": null,
+          "populationAffected": 1171,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 108.63,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-18T08:00:00Z",
+          "coordinates": {
+            "lat": 26.525,
+            "lng": 90.5
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "affected",
+          "affectedVillages": 13,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 783.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-18T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Nagaon",
+          "Chirang"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "scrapedAt": "2026-09-19T14:18:53Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 1,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 0,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 15,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "affected",
+          "affectedVillages": 15,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 937.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-17T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Nagaon"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "scrapedAt": "2026-09-19T14:18:51Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 2,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "dhemaji",
+          "name": "Dhemaji",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "lakhimpur",
+          "name": "Lakhimpur",
+          "populationAffected": 0,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 1,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 0,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 41,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "dhemaji",
+          "name": "Dhemaji",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-16T08:00:00Z",
+          "coordinates": {
+            "lat": 27.4855,
+            "lng": 94.556
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "lakhimpur",
+          "name": "Lakhimpur",
+          "severity": "affected",
+          "affectedVillages": 1,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-16T08:00:00Z",
+          "coordinates": {
+            "lat": 27.2364,
+            "lng": 94.1036
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        },
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "affected",
+          "affectedVillages": 41,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 1959.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-16T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Nagaon",
+          "Lakhimpur"
+        ]
+      }
+    },
+    {
       "date": "2026-09-15",
       "scrapedAt": "2026-09-16T15:48:19Z",
       "stats": {
@@ -16678,5 +16958,5 @@
       }
     }
   ],
-  "updatedAt": "2026-09-16T15:48:19Z"
+  "updatedAt": "2026-09-19T14:18:55Z"
 }

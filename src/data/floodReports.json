@@ -1,12 +1,27 @@
 [
   {
+    "id": "asdma-chirang",
+    "district": "Chirang",
+    "districtId": "chirang",
+    "location": "Chirang district",
+    "status": "affected",
+    "description": "ASDMA report 18 Sep 2026: 1,171 people affected, 9 villages, 0 relief camps. Revenue circles — Sidli: 244 people, 71.3 ha crop; Bengtal: 927 people, 37.33 ha crop.",
+    "lastUpdated": "2026-09-18T08:00:00Z",
+    "coordinates": {
+      "lat": 26.525,
+      "lng": 90.5
+    },
+    "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+    "source": "ASDMA Daily Flood Report"
+  },
+  {
     "id": "asdma-nagaon",
     "district": "Nagaon",
     "districtId": "nagaon",
     "location": "Nagaon district",
     "status": "affected",
-    "description": "ASDMA report 15 Sep 2026: 0 people affected, 52 villages, 0 relief camps. Revenue circles — Kampur: 0 people, 862 ha crop; Samaguri: 0 people, 2567 ha crop.",
-    "lastUpdated": "2026-09-15T08:00:00Z",
+    "description": "ASDMA report 18 Sep 2026: 0 people affected, 13 villages, 0 relief camps. Revenue circles — Rupahi: 0 people, 140 ha crop; Samaguri: 0 people, 643 ha crop.",
+    "lastUpdated": "2026-09-18T08:00:00Z",
     "coordinates": {
       "lat": 26.3509,
       "lng": 92.6925
