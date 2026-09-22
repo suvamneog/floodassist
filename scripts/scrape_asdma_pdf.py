@@ -546,6 +546,17 @@ def parse_pdf(pdf_path: Path) -> dict[str, Any]:
             full,
             re.DOTALL | re.MULTILINE,
         )
+    if not ad_match:
+        # Clear / zero-flood day: "Name of Affected Districts … Affected\n0"
+        zero_match = re.search(
+            r"Name of Affected Districts.{0,250}?\n\s*(?:Affected(?:\s+Districts)?\s*\n\s*)*"
+            r"(?:Affected\s+)?0(?:\s|$)",
+            full,
+            re.DOTALL,
+        )
+        if zero_match:
+            result["_affectedDistrictCount"] = 0
+            result["affectedDistricts"] = []
     if ad_match:
         result["_affectedDistrictCount"] = to_int(ad_match.group(1))
         raw = ad_match.group(2)
@@ -954,8 +965,9 @@ def build_datasets(parsed: dict[str, Any], report_date: dt.date, pdf_url: str) -
     if total_inmates == 0 and parsed.get("_inmatesTotal"):
         total_inmates = int(parsed["_inmatesTotal"])
     flooded_count = sum(1 for d in districts_out if d["severity"] != "normal")
-    # Prefer official affected-district count from the PDF header when present.
-    if parsed.get("_affectedDistrictCount"):
+    # Prefer official affected-district count from the PDF header when present
+    # (including explicit 0 on a clear / nil-flood day).
+    if parsed.get("_affectedDistrictCount") is not None:
         flooded_count = int(parsed["_affectedDistrictCount"])
     elif parsed.get("affectedDistricts"):
         flooded_count = len(parsed["affectedDistricts"])
@@ -1227,6 +1239,7 @@ def process_one_day(
     people_parsed = sum(d["population"] for d in parsed["population"].values())
     camps_parsed = sum(parsed["reliefCamps"].values())
     affected_n = len(parsed["affectedDistricts"])
+    clear_day = parsed.get("_affectedDistrictCount") == 0
 
     print(
         f"\nParsed report {report_date.isoformat()}: "
@@ -1234,11 +1247,18 @@ def process_one_day(
         f"{people_parsed:,} people, "
         f"{camps_parsed} relief camps, "
         f"{len(parsed['rivers']['danger'])} rivers > danger."
+        + (" (clear / nil-flood day)" if clear_day else "")
     )
 
     # Refuse to overwrite live/history with a clearly broken parse (PDF layout change).
-    # A real ASDMA daily report always names affected districts or has population/camp rows.
-    if affected_n == 0 and people_parsed == 0 and camps_parsed == 0 and not parsed["population"]:
+    # A real ASDMA report either names districts / has rows, OR explicitly reports 0 affected.
+    if (
+        affected_n == 0
+        and people_parsed == 0
+        and camps_parsed == 0
+        and not parsed["population"]
+        and not clear_day
+    ):
         raise RuntimeError(
             f"Parse produced empty flood figures for {report_date.isoformat()}. "
             "Live JSON left unchanged — check PDF layout / scraper regexes."
@@ -1247,7 +1267,7 @@ def process_one_day(
     pdf_url = "https://sdrf.assam.gov.in/dfr/"
     data = build_datasets(parsed, report_date, pdf_url)
 
-    if not data["districts"]:
+    if not data["districts"] and not clear_day:
         raise RuntimeError(
             f"No district rows built for {report_date.isoformat()}. "
             "Live JSON left unchanged."
