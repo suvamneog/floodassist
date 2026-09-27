@@ -1,6 +1,208 @@
 {
   "reports": [
     {
+      "date": "2026-09-27",
+      "scrapedAt": "2026-09-27T20:46:40Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "populationAffected": 0,
+          "severity": "normal",
+          "reliefCamps": 0,
+          "affectedVillages": 0,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "karbi-anglong",
+          "name": "Karbi Anglong",
+          "severity": "normal",
+          "affectedVillages": 0,
+          "river": null,
+          "populationAffected": 0,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-27T08:00:00Z",
+          "coordinates": {
+            "lat": 26.0,
+            "lng": 93.45
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "scrapedAt": "2026-09-27T20:46:39Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [],
+      "districts": [],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "scrapedAt": "2026-09-27T20:46:37Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [],
+      "districts": [],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "scrapedAt": "2026-09-27T20:46:35Z",
+      "stats": {
+        "peopleAffected": 173,
+        "floodedDistricts": 1,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 173,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 3,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "affected",
+          "affectedVillages": 3,
+          "river": null,
+          "populationAffected": 173,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-24T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Nagaon"
+        ]
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "scrapedAt": "2026-09-27T20:46:34Z",
+      "stats": {
+        "peopleAffected": 173,
+        "floodedDistricts": 1,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "populationAffected": 173,
+          "severity": "affected",
+          "reliefCamps": 0,
+          "affectedVillages": 3,
+          "campInmates": 0,
+          "humanLivesLost": 0
+        }
+      ],
+      "districts": [
+        {
+          "id": "nagaon",
+          "name": "Nagaon",
+          "severity": "affected",
+          "affectedVillages": 3,
+          "river": null,
+          "populationAffected": 173,
+          "reliefCamps": 0,
+          "campInmates": 0,
+          "cropAreaHa": 0.0,
+          "humanLivesLost": 0,
+          "lastUpdated": "2026-09-23T08:00:00Z",
+          "coordinates": {
+            "lat": 26.3509,
+            "lng": 92.6925
+          },
+          "coordinatesNote": "Approximate district headquarters location — not camp street GPS; ASDMA daily PDF has no camp coordinates",
+          "source": "ASDMA Daily Flood Report (SDRF/DFR)"
+        }
+      ],
+      "summary": {
+        "affectedNames": [
+          "Nagaon"
+        ]
+      }
+    },
+    {
       "date": "2026-09-22",
       "scrapedAt": "2026-09-22T21:35:02Z",
       "stats": {
@@ -17257,5 +17459,5 @@
       }
     }
   ],
-  "updatedAt": "2026-09-22T21:35:02Z"
+  "updatedAt": "2026-09-27T20:46:40Z"
 }
