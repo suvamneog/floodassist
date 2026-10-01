@@ -1,6 +1,69 @@
 {
   "reports": [
     {
+      "date": "2026-10-01",
+      "scrapedAt": "2026-10-01T21:06:08Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [],
+      "districts": [],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "scrapedAt": "2026-10-01T21:06:06Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [],
+      "districts": [],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "scrapedAt": "2026-10-01T21:06:05Z",
+      "stats": {
+        "peopleAffected": 0,
+        "floodedDistricts": 0,
+        "reliefCamps": 0,
+        "campInmates": 0,
+        "riverWarnings": 0,
+        "activeAlerts": 0
+      },
+      "rivers": {
+        "danger": [],
+        "flood": []
+      },
+      "topDistricts": [],
+      "districts": [],
+      "summary": {
+        "affectedNames": []
+      }
+    },
+    {
       "date": "2026-09-27",
       "scrapedAt": "2026-09-27T20:46:40Z",
       "stats": {
@@ -17459,5 +17522,5 @@
       }
     }
   ],
-  "updatedAt": "2026-09-27T20:46:40Z"
+  "updatedAt": "2026-10-01T21:06:08Z"
 }

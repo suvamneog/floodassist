@@ -7,7 +7,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above danger level as per today's CWC bulletin.",
-    "validUntil": "2026-09-27T08:00:00Z",
+    "validUntil": "2026-10-01T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -18,7 +18,7 @@
     "value": "None",
     "unit": "CWC bulletin · 8 AM (via ASDMA)",
     "description": "No rivers flowing above highest flood level today.",
-    "validUntil": "2026-09-27T08:00:00Z",
+    "validUntil": "2026-10-01T08:00:00Z",
     "source": "CWC via ASDMA Daily Flood Report"
   },
   {
@@ -28,8 +28,8 @@
     "level": "warning",
     "value": "0 districts",
     "unit": "0 people affected",
-    "description": "ASDMA report as on 27 Sep 2026: 0 relief camps housing 0 inmates.",
-    "validUntil": "2026-09-27T08:00:00Z",
+    "description": "ASDMA report as on 01 Oct 2026: 0 relief camps housing 0 inmates.",
+    "validUntil": "2026-10-01T08:00:00Z",
     "source": "ASDMA Daily Flood Report"
   }
 ]
